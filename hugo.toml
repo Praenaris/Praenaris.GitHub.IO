@@ -1,0 +1,11 @@
+
+
+BaseURL = "https://www.praenaris.com/"
+DisableKinds = ["taxonomy"] # removes tags/categories
+
+LanguageCode = "en-us"
+Title = "The Praenaris Official Website"
+
+
+
+
