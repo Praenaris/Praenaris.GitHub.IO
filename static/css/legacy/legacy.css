@@ -1,0 +1,598 @@
+:root {
+	--base--main-color--accent--lighter: hsl(0, 0%, 93%);
+	--base--main-color--accent--translucent: rgba(200, 200, 200, 0.25);
+	--base--main-color--accent: #bdd6eb;
+	--base--main-color--darker: hsl(219, 54%, 15%);
+	--base--main-color--lighter: hsl(219, 54%, 30%);
+	--base--main-color--translucent: rgba(30, 55, 100, 0.25);
+	--base--main-color: #00183a;
+	/*--base--main-color--accent: rgb(200, 205, 215);*/
+	/*--base--main-color--darker: hsl(219, 54%, 15%);*/
+	/*--base--main-color--lighter: hsl(219, 54%, 30%);*/
+	/*--base--main-color: rgb(30, 55, 100);*/
+
+	--logo--main-color--accent: rgb(189, 214, 235);
+	--logo--main-color: rgb(0, 24, 58);
+
+	--selection--background-color: var(--base--main-color--darker);
+	--selection--font-color: var(--base--main-color--accent--lighter);
+
+	--image--texture--jade: url("../images/texture-jade.png");
+	/*--image--background--jade: url("../images/background-repeatable.jpg");*/
+
+	--general--animation--loop--duration--normal: 3.5s;
+	--general--border-width: 2px;
+	--general--box-shadow--big--in: 0px 0px 128px rgba(0, 0, 0, 0.125) inset;
+	--general--box-shadow--medium--out: 0px 0px 64px rgba(0, 0, 0, 0.5);
+	--general--box-shadow--small--in: 0px 0px 48px rgba(0, 0, 0, 0.75) inset;
+	--general--margin: 64px;
+	--general--text--content--font-family: "Noto Serif";
+	--general--text--decorative--font-family: "Cinzel";
+	--general--text--heading--font-family: "Barlow Condensed";
+	--general--text--navigation--font-family: "Barlow Condensed";
+	--general--transition--duration--big--in: 0.5s;
+	--general--transition--duration--big--out: 0.75s;
+	--general--transition--duration--small--in: 0.125s;
+	--general--transition--duration--small--out: 0.5s;
+}
+
+
+
+
+
+
+
+
+@keyframes blinkingFade {
+	0%,
+	100% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0.5;
+	}
+}
+
+
+
+
+@keyframes moveRightToViewport {
+	0% {
+		left: 150%;
+		right: -150%;
+	}
+	100% {
+		left: 0%;
+		right: 0%;
+	}
+}
+
+
+@keyframes moveViewportToLeft {
+	0% {
+		left: 0%;
+		right: 0%;
+	}
+	100% {
+		left: -150%;
+		right: 150%;
+	}
+}
+
+
+
+
+
+
+
+
+* {
+	box-sizing: border-box;
+	font-size: 0px;
+	margin: 0px;
+	outline: none;
+	padding: 0px;
+}
+
+
+::selection {
+	background-color: var(--selection--background-color);
+	color: var(--selection--font-color);
+}
+
+
+
+
+
+
+
+
+html {
+	background-color: var(--base--main-color);
+	height: 100%;
+	width: 100%;
+}
+
+
+body {
+	background-image: url("../images/background-repeatable.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100%;
+	width: 100%;
+}
+
+
+
+
+
+
+
+
+div#NavigationToggler {
+	display: none;
+}
+
+
+
+
+nav {
+	/*background-color: var(--base--main-color--translucent);*/
+	/*background-image: linear-gradient(to right, var(--base--main-color--translucent), var(--base--main-color) 25%, var(--base--main-color) 75%, var(--base--main-color--translucent));*/
+	/*background-image: var(--image--texture--jade), linear-gradient(to bottom, var(--base--main-color--lighter), var(--base--main-color), var(--base--main-color--darker));*/
+	/*border-image-outset: var(--general--border-width);*/
+	/*border-image-slice: 100% 0%;*/
+	/*border-image-source: linear-gradient(to right, var(--base--main-color--accent--translucent), var(--base--main-color--accent) 25%, var(--base--main-color--accent) 75%, var(--base--main-color--accent--translucent));*/
+	/*border-image-width: 0px 0px var(--general--border-width);*/
+	/*box-shadow: var(--general--box-shadow--medium--out);*/
+	background-color: var(--base--main-color);
+	border-color: var(--base--main-color--accent);
+	border-style: solid;
+	border-width: var(--general--border-width) 0px;
+	display: flex;
+	height: 64px;
+	position: fixed;
+	top: 32px;
+	width: 100%;
+	z-index: 50;
+}
+
+
+				nav > a#PageLogo {
+					/*width: 400px;*/
+					background-color: var(--base--main-color--accent);
+					display: block;
+					flex-basis: calc(256px + 64px);
+					flex-grow: 0;
+					flex-shrink: 0;
+					height: 100%;
+					mask-image: url("../images/logo-praenaris-title-medium.png");
+					mask-position: center;
+					mask-repeat: no-repeat;
+				}
+
+
+				nav > ul {
+					flex-grow: 1;
+					flex-shrink: 1;
+					height: 100%;
+					list-style: none;
+					padding: 0px 16px;
+					text-align: right;
+				}
+
+
+								nav > ul > li {
+									/*box-shadow: none;*/
+									display: inline-block;
+									height: 100%;
+									/**/
+									transition-duration: var(--general--transition--duration--small--out);
+									transition-property: box-shadow;
+								}
+
+
+									nav > ul > li:hover {
+										/*box-shadow: var(--general--box-shadow--small--in);*/
+										/**/
+										transition-duration: var(--general--transition--duration--small--in);
+										transition-property: box-shadow;
+									}
+
+
+												nav > ul > li > a {
+													align-items: center;
+													display: flex;
+													height: 100%;
+													text-decoration: none;
+													width: 100%;
+												}
+
+
+																nav > ul > li > a > span {
+																	color: var(--base--main-color--accent);
+																	font-family: var(--general--text--navigation--font-family);
+																	font-size: 24px;
+																	font-weight: 400;
+																	letter-spacing: 1px;
+																	line-height: 100%;
+																	padding: 0px 16px 4px;
+																}
+
+
+
+
+																nav > ul > li > a > span::before {
+																	background-color: var(--base--main-color--accent);
+																	content: "";
+																	display: inline-block;
+																	height: var(--general--border-width);
+																	margin-bottom: 0px;
+																	margin-right: 6px;
+																	mask-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAICAYAAABuzHg3AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAzUlEQVRIie2WXQ6CMBCEvxaMtFDA+59OT6AHMPjQbawb/HmgisZJNjsdGmB2W4qZpokvhpnh9/KcZoEt0AED0AjvAQ+0QABcpjvRB+BUL2TknUhmHNFcRzTeZzzpXnLO84IEYjGtRM712ACV0g6lCziKoZZrVz23HU68AXZizhM7nM9vlQEzE1aeq6/r8VKoauISDhKad0pPnddLO0gBknEHbNQL5/kVnue1wtjnc/54BFP4EBn57S28L/0NPBa455oOkXPpFVgaH/+NuQDVShUAh07a/AAAAABJRU5ErkJgggAAAElFTkSuQmCC");
+																	mask-size: 100% 100%;
+																	vertical-align: middle;
+																	width: 32px;
+																}
+
+
+																nav > ul > li > a > span::after {
+																	background-color: var(--base--main-color--accent);
+																	content: "";
+																	display: inline-block;
+																	height: var(--general--border-width);
+																	margin-bottom: 0px;
+																	margin-left: 6px;
+																	mask-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAICAYAAABuzHg3AAAACXBIWXMAAAsTAAALEwEAmpwYAAAA3klEQVRIie2WSw7CMAxEX2n23IDjcxduwIYz8GnoR9CahRPJhIJQlU3VjlTZGVmWPMmkKURkD2yBK3AHGuAG+JBXga8N34Z6D3TAgEKSOMb9qpkdChE5ATtUhAEdpg/RcsOXtaAiW8E9KrhP8goV36Ob0Rq+MT1mAweUIeaCmG8YWTPCp/U9eupvqPg1euJrVOAzKn50hXVInfAtcMk43xscUGTuWZieZaaeY/b/J7fcAxU/bkTLp3PiFRZd0ZmamFu+2mQacLFw5L/AF2fhHniy/kQmwQEH4Mj6jJmEFy9K5ROsazbxAAAAAElFTkSuQmCCrkJggg==");
+																	mask-size: 100% 100%;
+																	vertical-align: middle;
+																	width: 32px;
+																}
+
+
+
+
+
+
+
+
+section {
+	/*box-shadow: var(--general--box-shadow--big--in);*/
+}
+
+
+		section.Overlay {
+			bottom: 0px;
+			left: 0px;
+			position: fixed;
+			right: 0px;
+			top: 0px;
+			z-index: 75;
+		}
+
+
+				section.Overlay#LoadingScreen {
+					align-items: center;
+					background-color: var(--base--main-color);
+					display: flex;
+					flex-direction: column;
+					gap: 12px;
+					justify-content: center;
+					opacity: 1;
+					visibility: visible;
+					z-index: 100;
+				}
+
+
+						section.Overlay.Hidden#LoadingScreen {
+							opacity: 0;
+							visibility: hidden;
+							/**/
+							transition-delay: 0.5s;
+							transition-duration: 1s;
+							transition-property: opacity, visibility;
+						}
+
+
+								section.Overlay#LoadingScreen > img {
+									width: 256px;
+									/**/
+									animation-delay: 0s;
+									animation-duration: var(--general--animation--loop--duration--normal);
+									animation-iteration-count: infinite;
+									animation-name: blinkingFade;
+								}
+
+
+								section.Overlay#LoadingScreen > span {
+									color: rgb(255, 255, 255);
+									font-family: var(--general--text--decorative--font-family);
+									font-size: 24px;
+									font-weight: 500;
+									letter-spacing: 6px;
+									text-align: center;
+									text-transform: uppercase;
+									width: 256px;
+									/**/
+									animation-delay: 0.5s;
+									animation-duration: var(--general--animation--loop--duration--normal);
+									animation-iteration-count: infinite;
+									animation-name: blinkingFade;
+								}
+
+
+				section.Overlay#LoadingSection {
+					/*box-shadow: 0px 0px 50vw 25vw var(--base--main-color--darker);*/
+					background-color: var(--base--main-color--darker);
+					background-image: url("../images/logo-praenaris-minimal-medium-watermark.png");
+					background-position: center;
+					background-repeat: no-repeat;
+					left: 150%;
+				}
+
+
+						section.Overlay.Shown#LoadingSection {
+							left: 0%;
+							/**/
+							animation-duration: var(--general--transition--duration--big--in);
+							animation-iteration-count: 1;
+							animation-name: moveRightToViewport;
+						}
+
+
+						section.Overlay.Hidden#LoadingSection {
+							left: 150%;
+							/**/
+							animation-duration: var(--general--transition--duration--big--out);
+							animation-iteration-count: 1;
+							animation-name: moveViewportToLeft;
+						}
+
+
+
+
+		section.Content {
+			/*height: 0px;*/
+			/*overflow-y: hidden;*/
+			/*visibility: hidden;*/
+			display: none;
+			min-height: 100vh;
+			width: 100%;
+		}
+
+
+				section.Content.Shown {
+					/*visibility: visible;*/
+					background-attachment: fixed;
+					background-position: center;
+					background-repeat: no-repeat;
+					background-size: auto 100%;
+					border: 2px dashed lightsalmon;
+					display: block;
+				}
+
+
+						section.Content.Shown#OurHome {
+							background-image: url("../images/background-opensea.jpg");
+							height: auto;
+						}
+
+
+						section.Content.Shown#OurWorlds {
+							background-image: url("../images/background-kilgarvan.jpg");
+							height: auto;
+						}
+
+
+						section.Content.Shown#AboutUs {
+							background-image: url("../images/background-opensea.jpg");
+							height: auto;
+						}
+
+
+						section.Content.Shown#PressKit {
+							background-image: url("../images/background-opensea.jpg");
+							height: auto;
+						}
+
+
+						section.Content.Shown#ContactUs {
+							background-image: url("../images/background-opensea.jpg");
+							height: auto;
+						}
+
+
+						section.Content.Shown#NotFound {
+							background-image: url("../images/background-opensea.jpg");
+							filter: grayscale(50%);
+							height: 100vh;
+						}
+
+
+
+
+						section.Content > article {
+							background-color: var(--base--main-color);
+							border-color: var(--base--main-color--accent);
+							border-style: solid;
+							border-width: var(--general--border-width);
+							/*box-shadow: var(--general--box-shadow--big--in), var(--general--box-shadow--medium--out);*/
+							margin: 224px auto 80px;
+							width: calc(100% - (2 * var(--general--margin)));
+						}
+
+
+								section.Content > article.Text {
+									max-width: 960px;
+									padding: 48px 64px;
+								}
+
+
+								section.Content > article.Embed {
+									max-width: 800px;
+									padding: 0px;
+								}
+
+
+										section.Content > article > h1 {
+											border-bottom-color: var(--base--main-color--accent);
+											border-bottom-style: solid;
+											border-bottom-width: var(--general--border-width);
+											color: var(--base--main-color--accent--lighter);
+											font-family: var(--general--text--heading--font-family);
+											font-size: 48px;
+											font-weight: 400;
+											letter-spacing: 1px;
+											line-height: 100%;
+											margin: 0px 0px 32px;
+											padding-bottom: 16px;
+										}
+
+
+										section.Content > article > p {
+											color: var(--base--main-color--lighter);
+											font-family: var(--general--text--content--font-family);
+											font-size: 20px;
+											font-weight: 400;
+											line-height: 150%;
+											margin: 0px 2px 16px;
+											text-align: left; /* justify */
+										}
+
+
+										section.Content > article > img {
+											display: block;
+											height: auto;
+											margin: 0px auto 32px;
+											max-width: 384px;
+											width: 100%;
+										}
+
+
+										section.Content > article > iframe {
+											aspect-ratio: 16 / 9;
+											border: none;
+											width: 100%;
+										}
+
+
+										section.Content > article > ul {
+											list-style: none;
+											margin: 0px 0px 32px;
+											padding: 0px calc(var(--general--margin) / 2);
+										}
+
+
+														section.Content > article > ul > li {
+															border-color: transparent;
+															border-style: solid;
+															border-width: var(--general--border-width);
+															width: 100%;
+														}
+
+
+															section.Content > article > ul > li:hover {
+																background-image: linear-gradient(to right, transparent, var(--base--main-color--darker) 25%, var(--base--main-color--darker) 75%, transparent);
+																border-image-outset: calc(var(--general--border-width) / 2);
+																border-image-slice: 100% 0%;
+																border-image-source: linear-gradient(to right, var(--base--main-color--accent--translucent), var(--base--main-color--accent) 25%, var(--base--main-color--accent) 75%, var(--base--main-color--accent--translucent));
+																border-image-width: var(--general--border-width) 0px;
+															}
+
+
+																		section.Content > article > ul > li > a {
+																			display: block;
+																			padding-left: 64px;
+																			text-decoration: none;
+																			width: 100%;
+																			/**/
+																			transition-duration: var(--general--transition--duration--small--out);
+																			transition-property: padding-left;
+																		}
+
+
+																			section.Content > article > ul > li:hover > a {
+																				padding-left: 128px;
+																				/**/
+																				transition-duration: var(--general--transition--duration--small--in);
+																				transition-property: padding-left;
+																			}
+
+
+																						section.Content > article > ul > li > a > img {
+																							height: auto;
+																							vertical-align: middle;
+																							width: 32px;
+																						}
+
+
+																						section.Content > article > ul > li > a > span {
+																							color: var(--base--main-color--accent--lighter);
+																							display: inline-block;
+																							font-family: var(--general--text--heading--font-family);
+																							font-size: 24px;
+																							letter-spacing: 1px;
+																							margin-bottom: 2px;
+																							margin-left: 16px;
+																							line-height: 62px;
+																							vertical-align: middle;
+																						}
+
+
+
+
+
+
+
+
+/*div#RepeatableBackground {
+	background-image: url("../images/background-repeatable.jpg");
+	background-position: center;
+	background-repeat: repeat-x;
+	background-size: auto 100%;
+	bottom: 0px;
+	filter: blur(4px);
+	left: 0px;
+	position: fixed;
+	right: 0px;
+	top: 0px;
+	z-index: 0;
+}*/
+
+
+/*div#FrontContent {
+	position: absolute;
+	width: 100%;
+	z-index: 25;
+}*/
+
+
+
+
+
+
+
+
+/*⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀*/
+/*⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⢀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀*/
+/*⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⠙⢶⣄⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⢰⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀*/
+/*⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⠈⢻⣿⣶⣤⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⢸⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀*/
+/*⡀⡀⡀⡀⡀⡀⡀⡀⡀⢀⡀⡀⡀⡀⡀⡀⡀⡀⡀⠈⣿⣿⣿⣿⣷⣦⣀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⢀⣀⣀⣀⣀⣐⣾⣴⣀⣀⣀⣀⣀⡀⡀⡀⡀⡀*/
+/*⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⠙⢶⣄⡀⡀⡀⡀⡀⡀⡀⠐⢭⣝⡛⠿⣿⣿⣿⣦⣄⠠⣀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⠐⢻⠙⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀*/
+/*⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⢻⣿⣷⣦⣀⡀⡀⡀⡀⡀⠹⣿⣿⣶⣮⣝⣻⠿⣷⣄⠩⣳⢦⣄⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⢸⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀*/
+/*⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⠈⢍⣛⠿⢿⣿⣦⣄⡀⡀⡀⢻⣿⣿⣿⣿⣿⣿⣶⣯⣆⡈⠳⣮⣟⠷⣶⣤⣀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⠈⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀*/
+/*⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⢹⣿⣷⣮⣭⣛⡿⢶⣄⠈⢭⣝⣛⣛⡿⠿⣿⣿⣿⣿⣮⢪⡻⣿⣮⣝⡻⢿⣶⣤⣄⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀*/
+/*⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⠘⡛⠿⠿⣿⣿⣿⣷⣮⣕⠈⣿⣿⣿⣿⣿⣷⣶⣾⣭⣿⣃⠹⣮⡙⢿⣿⣶⣭⡛⢿⣿⣷⣦⣄⣀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀*/
+/*⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⠘⣿⣿⣶⣶⣭⣽⣛⡿⠇⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⠘⢿⣦⡙⢿⣿⣿⣷⣮⣙⠿⣿⣿⣿⣶⣤⣀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀*/
+/*⡀⡀⡀⡀⠑⢦⣄⡀⡀⡀⡀⡀⡀⡀⡀⡀⣿⣿⣿⣿⣿⣿⣿⣿⡀⢛⣛⣛⣛⣛⣛⣛⣛⣿⣿⣿⣿⣅⠈⢿⣿⣷⣝⠿⣿⣿⣿⣷⣦⣍⠉⠉⠉⠉⠉⠑⣂⠴⠂⡀⡀⡀⡀⡀*/
+/*⡀⡀⡀⡀⡀⠘⠿⣿⣷⣦⣀⡀⡀⡀⡀⡀⢲⣶⣶⣶⣤⣭⣭⣭⣥⡀⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⡀⠻⣿⣿⣷⣌⡀⡀⡀⠈⠉⠙⠒⢀⣠⡴⠋⠁⡀⡀⡀⡀⡀⡀⡀*/
+/*⡀⡀⡀⡀⡀⡀⠙⣷⣶⣯⣽⣟⣲⠄⡀⡀⢸⣿⣿⣿⣿⣿⣿⣿⣿⠧⢸⣿⣿⣿⣿⣿⣿⡿⠿⠿⣿⣛⣛⡀⡀⠙⠿⠿⠿⣷⣄⡀⡀⢀⣤⣶⠟⠋⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀*/
+/*⡀⡀⡀⡀⡀⡀⡀⢩⣭⣭⣽⣿⣟⣛⣓⣀⠨⣭⣭⣭⣷⣶⣶⣶⣾⡇⢘⣩⣭⣭⣵⣶⣶⣾⣿⣿⣿⣿⣿⣿⡀⡀⡀⡀⡀⢀⣀⣡⡴⠟⡿⠃⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀*/
+/*⡀⡀⡀⡀⡀⡀⡀⡀⠿⠿⣿⣿⣿⣿⣿⣛⡀⣿⣿⣿⣿⣿⣿⡿⠿⢿⡀⢻⣿⣿⣿⣿⣿⣿⣿⡿⠿⠟⠛⣉⣠⠤⠴⠒⠛⠉⠁⡀⡀⡸⠁⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀*/
+/*⡀⡀⡀⡀⡀⡀⡀⡀⢸⣿⣿⣿⠿⠿⣿⣟⡀⣋⣩⣭⣥⣶⣶⣾⣿⣿⡇⢸⡿⠿⠛⠛⢉⣁⠤⠤⠒⠊⠉⠁⡀⡀⡀⡀⡀⡀⡀⡀⡀⡇⡀⡀⠔⣊⣉⡙⠲⡄⡀⡀⡀⡀⡀⡀*/
+/*⡀⡀⡀⡀⡀⡀⡀⡀⡀⣶⣶⣿⣿⠿⢿⣟⠂⣿⣿⣿⣿⠿⠿⠛⠛⠉⣁⠠⠄⠒⠂⠉⠁⡀⡀⡀⡀⡀⡀⡀⡀⡀⣀⣤⣤⣤⣤⣄⡀⠃⡀⡀⢪⠒⢦⠙⡆⢹⡀⡀⡀⡀⡀⡀*/
+/*⡀⡀⡀⡀⡀⡀⡀⡀⡀⣭⣽⣶⣾⣿⠿⠟⠐⠋⠉⡀⡀⠄⠐⡀⠈⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⣀⣀⣀⣀⡴⢛⡽⢖⣚⣛⣒⠦⢍⡳⣄⣀⣈⣠⠞⣠⢇⡾⡀⡀⡀⡀⡀⡀*/
+/*⡀⡀⡀⡀⡀⡀⡀⡀⠐⠛⠉⠉⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡔⠶⡀⢐⠪⠝⠒⠛⠛⠓⠒⠫⠔⠩⡀⡀⡀⠉⠢⠑⠌⠚⠶⣶⡯⠵⠋⡀⡀⡀⡀⡀⡀⡀*/
+/*⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀*/
+/*⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀*/

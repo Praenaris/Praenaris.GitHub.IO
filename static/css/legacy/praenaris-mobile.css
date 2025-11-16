@@ -1,0 +1,268 @@
+@media (max-width: 1120px) {
+
+	:root {
+		--base--main-color--accent: rgb(250, 70, 70);
+		--base--main-color--translucent: rgba(0, 5, 20, 0.65);
+		--base--main-color--transparent: rgba(0, 5, 20, 0);
+		--base--main-color: rgb(0, 5, 20);
+		--base--text-color--accent: rgb(245, 245, 245);
+		--base--text-color: rgb(244, 205, 137);
+
+		--arimalodge--main-color: rgb(205, 160, 105);
+		--embersoftheevening--main-color: rgb(35, 20, 0);
+		--thesilentswan--main-color: rgb(70, 175, 165);
+
+		--home--main-color: rgb(0, 7, 27);
+		--about--main-color: rgb(2, 9, 20);
+		--contact--main-color: rgb(1, 7, 16);
+
+		--general--button--font-family: "Work Sans";
+		--general--button--font-size: 18px;
+		--general--button--font-weight: 400;
+		--general--button--letter-spacing: 0.15em;
+		--general--button--vertical-padding: 24px;
+		--general--button--width: 320px;
+		--general--content--max-width: 1800px;
+		--general--h1--font-family: "Crimson Text";
+		--general--h1--font-size: 40px;
+		--general--h1--font-weight: 700;
+		--general--h1--letter-spacing: 0.125em;
+		--general--h1--line-height: normal;
+		--general--h1--margin: 0.5em auto;
+		--general--h1--max-width: none;
+		--general--h1--text-shadow: 1px 1px calc(var(--general--separation-line--height) * 2) var(--base--main-color--translucent);
+		--general--h2--font-family: "Crimson Text";
+		--general--h2--font-size: 20px;
+		--general--h2--font-weight: 600;
+		--general--h2--letter-spacing: 0.1em;
+		--general--h2--line-height: 1.5em;
+		--general--h2--margin: 0.5em auto 1em;
+		--general--h2--max-width: 760px;
+		--general--h2--text-shadow: 1px 1px calc(var(--general--separation-line--height) * 2) var(--base--main-color--translucent);
+		--general--h3--font-family: "Crimson Text";
+		--general--h3--font-size: 22px;
+		--general--h3--font-weight: 700;
+		--general--h3--letter-spacing: 0.15em;
+		--general--h3--line-height: normal;
+		--general--h3--margin: 0.5em auto 1em;
+		--general--h3--max-width: none;
+		--general--h3--text-shadow: 1px 1px calc(var(--general--separation-line--height) * 2) var(--base--main-color--translucent);
+		--general--h4--font-family: "Crimson Text";
+		--general--h4--font-size: 16px;
+		--general--h4--font-weight: 700;
+		--general--h4--letter-spacing: 0.1em;
+		--general--h4--line-height: normal;
+		--general--h4--margin: 0.5em auto 1em;
+		--general--h4--max-width: none;
+		--general--h4--text-shadow: 1px 1px calc(var(--general--separation-line--height) * 2) var(--base--main-color--translucent);
+		--general--h5--font-family: "Work Sans";
+		--general--h5--font-size: 36px;
+		--general--h5--font-weight: 700;
+		--general--h5--letter-spacing: 0.15em;
+		--general--h5--line-height: normal;
+		--general--h5--margin: 0.5em var(--overlay-container--control--side) 1em auto;
+		--general--h5--max-width: none;
+		--general--h5--text-shadow: 1px 1px calc(var(--general--separation-line--height) * 2) var(--base--main-color--translucent);
+		--general--h6--font-family: "Crimson Text";
+		--general--h6--font-size: 14px;
+		--general--h6--font-weight: 600;
+		--general--h6--letter-spacing: 0.1em;
+		--general--h6--line-height: normal;
+		--general--h6--margin: 0.5em auto 0.5em;
+		--general--h6--max-width: none;
+		--general--h6--text-shadow: 1px 1px calc(var(--general--separation-line--height) * 2) var(--base--main-color--translucent);
+		--general--p--font-family--header: "Work Sans";
+		--general--p--font-family: "Crimson Text";
+		--general--p--font-size--header: 20px;
+		--general--p--font-size: 18px;
+		--general--p--font-weight--header: 600;
+		--general--p--font-weight: 400;
+		--general--p--letter-spacing--overlay: 0.05em;
+		--general--p--letter-spacing--section: 0.1em;
+		--general--p--line-height--overlay: 1.35em;
+		--general--p--line-height--section: 1.65em;
+		--general--p--margin--header: 3em auto 1.5em;
+		--general--p--margin--overlay: 0.5em 0 0.5em;
+		--general--p--margin--section: 1.5em auto 1.5em;
+		--general--p--text-shadow: 1px 1px calc(var(--general--separation-line--height) * 2) var(--base--main-color--translucent);
+		--general--section--padding: 12px;
+		--general--separation-line--height: 0.925px;
+
+		--overlay--gradient--width: var(--overlay-container--background--width);
+		--overlay--margin-horizontal: 16px;
+		--overlay--margin-vertical: 64px;
+		--overlay-container--background--aspect-ratio: 1.777;
+		--overlay-container--background--width: calc(var(--overlay-container--background--aspect-ratio) * (100vh - (2 * var(--overlay--margin-vertical)) - (2 * var(--general--separation-line--height))));
+		--overlay-container--content--max-width: 100%;
+		--overlay-container--content--min-width: calc(100% - var(--overlay-container--background--width));
+		--overlay-container--content--overflow-y: scroll;
+		--overlay-container--content--padding: 32px 44px calc(56px + var(--store-list--height));
+		--overlay-container--content--width: 640px;
+		--overlay-container--control--right: 24px;
+		--overlay-container--control--side: 64px;
+		--overlay-container--control--top: 24px;
+		--overlay-container--gradient--max-width: 100%;
+		--overlay-container--gradient--min-width: calc(100% - var(--overlay-container--background--width));
+		--overlay-container--gradient--width: 0px;
+		--overlay-container--height: calc(100% - (2 * var(--overlay--margin-vertical)));
+		--overlay-container--store--bottom: 32px;
+		--overlay-container--store--right: 32px;
+		--overlay-container--store--shadow-spread: 16px;
+		--overlay-container--width: calc(100% - (2 * var(--overlay--margin-horizontal)));
+
+		--nav-bar--height: 128px;
+		--nav-bar--padding: 0px;
+		--nav-button--font-family: "Work Sans";
+		--nav-button--font-size: 16px;
+		--nav-button--font-weight: 400;
+		--nav-button--height: 36px;
+		--nav-button--letter-spacing: 0.15em;
+		--nav-button--shadow: 1px 1px calc(var(--general--separation-line--height) * 2) var(--base--main-color--translucent);
+		--nav-compass--front-part--size: 68px;
+		--nav-compass--middle-part--size: 48px;
+		--nav-compass--size: 72px;
+		--nav-list--margin-side: 16px;
+		--nav-list--margin-up: 22px;
+		--nav-list-item--margin-bottom: 8px;
+		--nav-list-item--margin-side: 8px;
+
+		--contact-list--margin-top: 48px;
+		--contact-list--max-width: 460px;
+		--contact-list-item--font-family: "Work Sans";
+		--contact-list-item--font-size: 16px;
+		--contact-list-item--font-weight--hover: 500;
+		--contact-list-item--font-weight: 400;
+		--contact-list-item--height: 56px;
+		--contact-list-item--image-size: 32px;
+		--contact-list-item--left-padding: calc(var(--contact-list-item--image-size) + 0px);
+		--contact-list-item--letter-spacing: 0.125em;
+		--contact-list-item--margin-top: 16px;
+		--contact-list-item--text-align: center;
+
+		--social-list--bottom: 64px;
+		--social-list--height--big: 56px;
+		--social-list--height: 48px;
+		--social-list--left: 0px;
+		--social-list--right: 0px;
+		--social-list-item--image-size--big: 32px;
+		--social-list-item--image-size: 28px;
+		--social-list-item--margin-side--big: 24px;
+		--social-list-item--margin-side: 4px;
+
+		--store-list--height: 48px;
+		--store-list-item--image-size: 28px;
+		--store-list-item--margin-side: 4px;
+
+		--project-list-item--background-gradient-start: 50%;
+		--project-list-item--font-family: "Work Sans";
+		--project-list-item--font-size: 28px;
+		--project-list-item--font-weight: 700;
+		--project-list-item--height: calc((9/6) * var(--project-list-item--width));
+		--project-list-item--letter-spacing: 0.25em;
+		--project-list-item--margin-bottom: 12px;
+		--project-list-item--margin-side: 12px;
+		--project-list-item--mix-blend-mode: normal;
+		--project-list-item--opacity: 1.0;
+		--project-list-item--width: 320px;
+		--project-list-item-text--padding: 240px 52px 24px;
+
+		--big-iceberg-button--margin-top: 0px;
+		--big-iceberg-mockup--size-factor: 0.6;
+		--big-iceberg-mockup--top: 200px;
+		--big-iceberg-section--height: 1280px;
+
+		--small-iceberg-heading--margin-bottom: 200px;
+		--small-iceberg-mockup--size-factor: 0.6;
+		--small-iceberg-mockup--vertical-offset: -32px;
+		--small-iceberg-section--height: 2080px;
+		--small-iceberg-section--max-width: 1200px;
+		--small-iceberg-section--padding-top: 180px;
+
+		--works-section--padding-bottom: 160px;
+		--works-section--padding-top: 32px;
+
+		--workshop-section--padding-bottom: 64px;
+		--workshop-section--padding-top: 128px;
+
+		--tag-list-item--border-radius: 4px;
+		--tag-list-item--font-family: "Work Sans";
+		--tag-list-item--font-size: 16px;
+		--tag-list-item--font-weight: 300;
+		--tag-list-item--margin-right: 4px;
+		--tag-list-item--margin-top: 4px;
+		--tag-list-item--padding: 2px 4px;
+
+		--staff-list--margin-top: 64px;
+		--staff-list-item--display: block;
+		--staff-list-item--height: auto;
+		--staff-list-item--margin-bottom: 48px;
+		--staff-list-item--margin-side: 16px;
+		--staff-list-item--margin-top: 0;
+		--staff-list-item--width: 100%;
+		--staff-list-item-description--border-left-color: initial;
+		--staff-list-item-description--border-left-style: none;
+		--staff-list-item-description--border-left-width: initial;
+		--staff-list-item-description--margin: 0;
+		--staff-list-item-description--padding: 8px 0 0;
+		--staff-list-item-description--text-align: center;
+		--staff-list-item-description-quote--font-family: "Crimson Text";
+		--staff-list-item-description-quote--font-size--smaller: 18px;
+		--staff-list-item-description-quote--font-size: 28px;
+		--staff-list-item-description-quote--font-style: italic;
+		--staff-list-item-description-quote--margin-top: 8px;
+		--staff-list-item-description-quote--text-align: center;
+		--staff-list-item-description-social-list--bottom: 0;
+		--staff-list-item-description-social-list--margin-top: 6px;
+		--staff-list-item-description-social-list--position: relative;
+		--staff-list-item-description-title--font-family: "Crimson Text";
+		--staff-list-item-description-title-alias--display: block;
+		--staff-list-item-description-title-alias--font-size: 28px;
+		--staff-list-item-description-title-alias--font-weight: 400;
+		--staff-list-item-description-title-alias--margin-left: 0;
+		--staff-list-item-description-title-alias--opacity: 0.5;
+		--staff-list-item-description-title-name--font-size: 40px;
+		--staff-list-item-description-title-name--font-weight: 600;
+		--staff-list-item-portrait--background-size: auto 112px;
+		--staff-list-item-portrait--size: 172px;
+		--staff-list-item-portrait-compass--size: calc(100% - 12px);
+		--staff-section--background-color: var(--base--main-color);
+
+		--contact-section--height: 1250px;
+		--contact-section--padding-top: 310px;
+
+		--copyright-section--background-color: var(--base--main-color);
+		--copyright-section--padding-bottom: 48px;
+		--copyright-section--padding-top: 32px;
+	}
+
+}
+
+
+
+
+
+
+
+
+/*⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀*/
+/*⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⢀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀*/
+/*⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⠙⢶⣄⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⢰⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀*/
+/*⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⠈⢻⣿⣶⣤⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⢸⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀*/
+/*⡀⡀⡀⡀⡀⡀⡀⡀⡀⢀⡀⡀⡀⡀⡀⡀⡀⡀⡀⠈⣿⣿⣿⣿⣷⣦⣀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⢀⣀⣀⣀⣀⣐⣾⣴⣀⣀⣀⣀⣀⡀⡀⡀⡀⡀*/
+/*⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⠙⢶⣄⡀⡀⡀⡀⡀⡀⡀⠐⢭⣝⡛⠿⣿⣿⣿⣦⣄⠠⣀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⠐⢻⠙⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀*/
+/*⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⢻⣿⣷⣦⣀⡀⡀⡀⡀⡀⠹⣿⣿⣶⣮⣝⣻⠿⣷⣄⠩⣳⢦⣄⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⢸⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀*/
+/*⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⠈⢍⣛⠿⢿⣿⣦⣄⡀⡀⡀⢻⣿⣿⣿⣿⣿⣿⣶⣯⣆⡈⠳⣮⣟⠷⣶⣤⣀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⠈⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀*/
+/*⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⢹⣿⣷⣮⣭⣛⡿⢶⣄⠈⢭⣝⣛⣛⡿⠿⣿⣿⣿⣿⣮⢪⡻⣿⣮⣝⡻⢿⣶⣤⣄⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀*/
+/*⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⠘⡛⠿⠿⣿⣿⣿⣷⣮⣕⠈⣿⣿⣿⣿⣿⣷⣶⣾⣭⣿⣃⠹⣮⡙⢿⣿⣶⣭⡛⢿⣿⣷⣦⣄⣀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀*/
+/*⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⠘⣿⣿⣶⣶⣭⣽⣛⡿⠇⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⠘⢿⣦⡙⢿⣿⣿⣷⣮⣙⠿⣿⣿⣿⣶⣤⣀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀*/
+/*⡀⡀⡀⡀⠑⢦⣄⡀⡀⡀⡀⡀⡀⡀⡀⡀⣿⣿⣿⣿⣿⣿⣿⣿⡀⢛⣛⣛⣛⣛⣛⣛⣛⣿⣿⣿⣿⣅⠈⢿⣿⣷⣝⠿⣿⣿⣿⣷⣦⣍⠉⠉⠉⠉⠉⠑⣂⠴⠂⡀⡀⡀⡀⡀*/
+/*⡀⡀⡀⡀⡀⠘⠿⣿⣷⣦⣀⡀⡀⡀⡀⡀⢲⣶⣶⣶⣤⣭⣭⣭⣥⡀⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⡀⠻⣿⣿⣷⣌⡀⡀⡀⠈⠉⠙⠒⢀⣠⡴⠋⠁⡀⡀⡀⡀⡀⡀⡀*/
+/*⡀⡀⡀⡀⡀⡀⠙⣷⣶⣯⣽⣟⣲⠄⡀⡀⢸⣿⣿⣿⣿⣿⣿⣿⣿⠧⢸⣿⣿⣿⣿⣿⣿⡿⠿⠿⣿⣛⣛⡀⡀⠙⠿⠿⠿⣷⣄⡀⡀⢀⣤⣶⠟⠋⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀*/
+/*⡀⡀⡀⡀⡀⡀⡀⢩⣭⣭⣽⣿⣟⣛⣓⣀⠨⣭⣭⣭⣷⣶⣶⣶⣾⡇⢘⣩⣭⣭⣵⣶⣶⣾⣿⣿⣿⣿⣿⣿⡀⡀⡀⡀⡀⢀⣀⣡⡴⠟⡿⠃⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀*/
+/*⡀⡀⡀⡀⡀⡀⡀⡀⠿⠿⣿⣿⣿⣿⣿⣛⡀⣿⣿⣿⣿⣿⣿⡿⠿⢿⡀⢻⣿⣿⣿⣿⣿⣿⣿⡿⠿⠟⠛⣉⣠⠤⠴⠒⠛⠉⠁⡀⡀⡸⠁⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀*/
+/*⡀⡀⡀⡀⡀⡀⡀⡀⢸⣿⣿⣿⠿⠿⣿⣟⡀⣋⣩⣭⣥⣶⣶⣾⣿⣿⡇⢸⡿⠿⠛⠛⢉⣁⠤⠤⠒⠊⠉⠁⡀⡀⡀⡀⡀⡀⡀⡀⡀⡇⡀⡀⠔⣊⣉⡙⠲⡄⡀⡀⡀⡀⡀⡀*/
+/*⡀⡀⡀⡀⡀⡀⡀⡀⡀⣶⣶⣿⣿⠿⢿⣟⠂⣿⣿⣿⣿⠿⠿⠛⠛⠉⣁⠠⠄⠒⠂⠉⠁⡀⡀⡀⡀⡀⡀⡀⡀⡀⣀⣤⣤⣤⣤⣄⡀⠃⡀⡀⢪⠒⢦⠙⡆⢹⡀⡀⡀⡀⡀⡀*/
+/*⡀⡀⡀⡀⡀⡀⡀⡀⡀⣭⣽⣶⣾⣿⠿⠟⠐⠋⠉⡀⡀⠄⠐⡀⠈⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⣀⣀⣀⣀⡴⢛⡽⢖⣚⣛⣒⠦⢍⡳⣄⣀⣈⣠⠞⣠⢇⡾⡀⡀⡀⡀⡀⡀*/
+/*⡀⡀⡀⡀⡀⡀⡀⡀⠐⠛⠉⠉⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡔⠶⡀⢐⠪⠝⠒⠛⠛⠓⠒⠫⠔⠩⡀⡀⡀⠉⠢⠑⠌⠚⠶⣶⡯⠵⠋⡀⡀⡀⡀⡀⡀⡀*/
+/*⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀*/
+/*⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀*/
