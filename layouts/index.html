@@ -1,5 +1,196 @@
-{{ define "main" }}
-	<main>
-		<h1>Praenaris - Page under construction</h1>
-	</main>
-{{ end }}
+<!doctype html>
+
+
+
+
+<html>
+
+
+	<head>
+
+		<title>Praenaris · Official Website</title>
+
+		{{ range .Site.Params.Authors }}
+		<meta name="author" content="{{ . }}">
+		{{ end }}
+		<meta name="description" content="Creating unique and artistically sound games.">
+		<meta name="keywords" content="praenaris, studio circenses, pc, console, handheld, mobile, videogame, game, application, app, indie, developer, studio, company">
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, width=device-width">
+
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link rel="stylesheet" type="text/css" crossorigin="anonymous" href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap">
+		<link rel="stylesheet" type="text/css" crossorigin="anonymous" href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
+		<link rel="stylesheet" type="text/css" crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha384-9Z9AuAj0Xi0z7WFOSgjjow8EnNY9wPNp925TVLlAyWhvZPsf5Ks23Ex0mxIrWJzJ">
+
+		<link rel="icon" type="image/png" href="./images/favicon-fallback.png">
+		<link rel="stylesheet" type="text/css" crossorigin="anonymous" href="./stylesheets/general.css">
+		<link rel="stylesheet" type="text/css" crossorigin="anonymous" href="./stylesheets/praenaris.css">
+		<link rel="stylesheet" type="text/css" crossorigin="anonymous" href="./stylesheets/praenaris-mobile.css">
+		<script defer src="./scripts/color_mode_switcher.js"></script>
+		<script defer src="./scripts/data_loader.js"></script>
+		<script defer src="./scripts/image_cacher.js"></script>
+		<script defer src="./scripts/overlay_manager.js"></script>
+		<script defer src="./scripts/whitespace_remover.js"></script>
+
+		<script src="./scripts/main.js"></script>
+
+	</head>
+
+
+	<body id="pr-page-home">
+
+		<aside id="pr-loading" style="background-image: url('data:image/webp;base64,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hjoN3HQBrTa1dWQhwBeAYw0teJkDMLazM0TZrw+YA4C2HgCtStBIYxWgDwBaWoAulAVWUDggVAAAADAIAJ0BKrQAeAA+0WiwUygmJKKgaAEAGglpbuF18AA7odVSbJiHVUmyYh1VJsmIdVSbJiHVUmyYh1VJsmIdVSbJiHVUmyYh1U2AAP7/RsAAAAAAAFhNUCDOBQAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNy4xLWMwMDAgNzkuYTg3MzFiOSwgMjAyMS8wOS8wOS0wMDozNzozOCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0RXZ0PSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VFdmVudCMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDIyLjUgKFdpbmRvd3MpIiB4bXA6Q3JlYXRlRGF0ZT0iMjAyNC0wMi0wM1QxNjoyNjo0MyswMTowMCIgeG1wOk1vZGlmeURhdGU9IjIwMjQtMDItMDNUMjA6MDk6MTErMDE6MDAiIHhtcDpNZXRhZGF0YURhdGU9IjIwMjQtMDItMDNUMjA6MDk6MTErMDE6MDAiIGRjOmZvcm1hdD0iaW1hZ2UvcG5nIiBwaG90b3Nob3A6Q29sb3JNb2RlPSIzIiBwaG90b3Nob3A6SUNDUHJvZmlsZT0ic1JHQiBJRUM2MTk2Ni0yLjEiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NWRmYTBjOTItYzJmYi1hNDQyLTgwMmUtNGJiNjNlNmRiYzI3IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOmNmNzA5NDIwLWRiNTgtMDc0ZS1iYWZhLWY4YWIxMGY0ZWExYyIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOmNmNzA5NDIwLWRiNTgtMDc0ZS1iYWZhLWY4YWIxMGY0ZWExYyI+IDx4bXBNTTpIaXN0b3J5PiA8cmRmOlNlcT4gPHJkZjpsaSBzdEV2dDphY3Rpb249ImNyZWF0ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6Y2Y3MDk0MjAtZGI1OC0wNzRlLWJhZmEtZjhhYjEwZjRlYTFjIiBzdEV2dDp3aGVuPSIyMDI0LTAyLTAzVDE2OjI2OjQzKzAxOjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgMjIuNSAoV2luZG93cykiLz4gPHJkZjpsaSBzdEV2dDphY3Rpb249InNhdmVkIiBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOjVkZmEwYzkyLWMyZmItYTQ0Mi04MDJlLTRiYjYzZTZkYmMyNyIgc3RFdnQ6d2hlbj0iMjAyNC0wMi0wM1QyMDowOToxMSswMTowMCIgc3RFdnQ6c29mdHdhcmVBZ2VudD0iQWRvYmUgUGhvdG9zaG9wIDIyLjUgKFdpbmRvd3MpIiBzdEV2dDpjaGFuZ2VkPSIvIi8+IDwvcmRmOlNlcT4gPC94bXBNTTpIaXN0b3J5PiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pg==');"></aside>
+
+		<aside id="pr-overlay" class="hidden" onclick="hideOverlay(true, event)">
+
+			<div id="pr-overlay-swan" class="pr-overlay-container pr-overlay-container-swan hidden">
+				<div class="pr-overlay-gradient"></div>
+				<div class="pr-overlay-content">
+					<h5>The Silent Swan</h5>
+					<p>The Silent Swan is a relaxed and slow first-person narrative experience that combines the open levels formula with mechanics of a walking simulator. The game follows Mirov, whom, after waking up seventeen years into the future, enters The Land Beyond the Walls in search of the past he left behind. Throughout the game Mirov will gradually near the bed of the calamity that struck his home, and get closer to the truths he is determined to unearth, while a strange uneasiness warns him he best walk back.</p>
+					<p>The levels the player will traverse are megalithic urban areas, much larger and expansive than there is any need for, which the player will cross following different objectives, as the story gradually unravels around them.</p>
+					<p>The Silent Swan is the story of two cities: Urzhum and Sernur; of two conflicts: past and future; and of two people; Selene and Mirov.</p>
+					<p class="pr-header">Behind the scenes summary</p>
+					<p>The Silent Swan is the debut videogame of Praenaris. It began development as a university project entitled Project Circenses in late 2020. Originally thought as an oversized walking simulator to showcase the 3D work of the team, it ballooned into the game it now is after joining the PlayStation Talents program.</p>
+					<p>Release date: <b>November 3<sup>rd</sup> 2023</b>.</p>
+				</div>
+				<ul class="pr-store-list pr-overlay-store">
+					<li><a class="pr-store-item pr-store-item-steam" target="_blank" href="https://store.steampowered.com/app/1898880/The_Silent_Swan/"></a></li>
+					<li><a class="pr-store-item pr-store-item-psstore" target="_blank" href="https://store.playstation.com/concept/10005130/"></a></li>
+					<li><a class="pr-store-item pr-store-item-itchio" target="_blank" href="https://praenaris.itch.io/thesilentswan"></a></li>
+				</ul>
+				<a class="pr-control-item pr-control-item-close" onclick="hideOverlayContainer(this.parentElement, true, event)"></a>
+			</div>
+
+			<div id="pr-overlay-arima" class="pr-overlay-container pr-overlay-container-arima hidden">
+				<div class="pr-overlay-gradient"></div>
+				<div class="pr-overlay-content">
+					<h5>Arima Lodge</h5>
+					<p>Within the domed city of a dystopian future, Kai the bellhop rides the elevator of Arima Lodge, the hotel he works at, up from the ground floor to get a relief. However, after a secretive man rushes into the elevator and compels him to get to the 100th floor —the rooftop— instead, he starts to realize something very serious is amiss.</p>
+					<p>The short, 8-minute videogame is free to play on itch.io, and will soon come out as free to play on Steam and Android.</p>
+					<p class="pr-header">Behind the scenes summary</p>
+					<p>Arima Lodge was a jam game that came out of the Indie Spain Jam of 2022. It is currently being reworked with new content and several QoL changes to come out on other platforms.</p>
+					<p>Release date: <b>September 2022 (original)</b>; <b>2024 (rework)</b>.</p>
+				</div>
+				<ul class="pr-store-list pr-overlay-store">
+					<li><a class="pr-store-item pr-store-item-itchio" target="_blank" href="https://praenaris.itch.io/arima-lodge"></a></li>
+				</ul>
+				<a class="pr-control-item pr-control-item-close" onclick="hideOverlayContainer(this.parentElement, true, event)"></a>
+			</div>
+
+			<div id="pr-overlay-embers" class="pr-overlay-container pr-overlay-container-embers hidden">
+				<div class="pr-overlay-gradient"></div>
+				<div class="pr-overlay-content">
+					<h5>Embers of the Evening</h5>
+					<p>Embers of the Evening is a first-person psychological horror game that takes place aboard a ship sailing across the black sea of a sunless world. As the player character, Ludwig, you will have to struggle every day to fend off the darkness that is engulfing both the ship and your mind. And yet, the worst challenge will always come once you close your eyes: you will plunge into a nightmare, travel to a different ship, and your previous actions will determine whether you can escape the nightmare, or will be forever trapped within it.</p>
+					<p>Soon, you will have to ask yourself: are you a sailor dreaming of a nightmarish world, or are you trapped in a nightmare dreaming of being a sailor?</p>
+					<p class="pr-header">Behind the scenes summary</p>
+					<p>Embers of the Evening is the second fully-fledged indie videogame by Praenaris. It began development in late 2022 under the title of Project Umbra.</p>
+					<p>Release date: <b>TBD</b></p>
+				</div>
+				<ul class="pr-store-list pr-overlay-store">
+					<li><a class="pr-store-item pr-store-item-steam" target="_blank" href="https://store.steampowered.com/app/2706010/Embers_of_the_Evening/"></a></li>
+				</ul>
+				<a class="pr-control-item pr-control-item-close" onclick="hideOverlayContainer(this.parentElement, true, event)"></a>
+			</div>
+
+		</aside>
+
+		<nav id="pr-nav-bar">
+			<ul class="pr-nav-list left-aligned">
+				<li>
+					<a class="pr-nav-button selected" href="./">Homepage</a>
+				</li>
+				<li>
+					<a class="pr-nav-button" href="./#pr-section-works">Our Works</a>
+				</li>
+			</ul>
+			<a class="pr-nav-compass" href="./">
+				<div class="pr-nav-compass-part"></div><div class="pr-nav-compass-part"></div>
+			</a>
+			<ul class="pr-nav-list right-aligned">
+				<!--<li>
+					<a class="pr-nav-button" target="_blank" href="https://drive.google.com/drive/folders/13R8mnC3lGNkXKFQEvTMbwD4sYJH67MdD">Press Kit</a>
+				</li>-->
+				<li>
+					<a class="pr-nav-button" href="./about.html">About Us</a>
+				</li>
+				<li>
+					<a class="pr-nav-button" href="./contact.html">Contact</a>
+				</li>
+			</ul>
+		</nav>
+
+		<section id="pr-section-big-iceberg" class="pr-section pr-section-big-iceberg">
+			<h1>Welcome aboard, stranger</h1>
+			<h2><a href='./about.html'>Praenaris</a> is a videogame and software development company based in Donostia / San Sebastián, Basque Country, Spain.</h2>
+			<h2>Our goal is to create unique and artistically-sound videogames and software.</h2>
+			<a class="pr-button pr-button-iceberg" href="#pr-section-works">Our Works</a>
+			<ul class="pr-social-list accented">
+				<li><a class="pr-social-item pr-social-item-discord" target="_blank" href="https://discord.gg/wjyvArdSnS"></a></li>
+				<li><a class="pr-social-item pr-social-item-twitterx" target="_blank" href="https://twitter.com/Praenaris"></a></li>
+				<li><a class="pr-social-item pr-social-item-youtube" target="_blank" href="https://www.youtube.com/channel/UCTKUR686M_uoWpRdiPxqPCA"></a></li>
+				<li><a class="pr-social-item pr-social-item-instagram" target="_blank" href="https://www.instagram.com/the.praenaris"></a></li>
+				<li><a class="pr-social-item pr-social-item-email" target="_blank" href="mailto:contact@praenaris.com"></a></li>
+			</ul>
+		</section>
+
+		<section id="pr-section-works" class="pr-section pr-section-works">
+			<h1>Our Works</h1>
+			<h3>Land ho!</h3>
+			<ul class="pr-project-list">
+				<li><a class="pr-project-item pr-project-item-swan" onclick="showOverlayContainerById('pr-overlay-swan', true, event)">
+					<!--<span>The Silent Swan</span>-->
+				</a></li>
+				<li><a class="pr-project-item pr-project-item-arima" onclick="showOverlayContainerById('pr-overlay-arima', true, event)">
+					<!--<span>Arima Lodge</span>-->
+				</a></li>
+				<li><a class="pr-project-item pr-project-item-embers" onclick="showOverlayContainerById('pr-overlay-embers', true, event)">
+					<!--<span>Embers of the Evening</span>-->
+				</a></li>
+			</ul>
+		</section>
+
+		<section id="pr-section-workshop" class="pr-section pr-section-workshop">
+			<h1>Workshop</h1>
+			<h4>Bizarre creatures, strange characters, unknown sounds, complex systems… what could it be?</h4>
+			<h4>Come in and take a closer look at what the Praenaris crew have been investigating lately.</h4>
+			<a class="pr-button pr-button-workshop" target="_blank" href="https://discord.com/channels/740189584230449194/1085533875511496734">Take a look</a>
+		</section>
+
+		<section id="pr-section-copyright" class="pr-section pr-section-copyright">
+			<h6>gg</h6>
+		</section>
+
+	</body>
+
+
+</html>
+
+
+
+
+<!--⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀-->
+<!--⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⢀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀-->
+<!--⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⠙⢶⣄⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⢰⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀-->
+<!--⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⠈⢻⣿⣶⣤⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⢸⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀-->
+<!--⡀⡀⡀⡀⡀⡀⡀⡀⡀⢀⡀⡀⡀⡀⡀⡀⡀⡀⡀⠈⣿⣿⣿⣿⣷⣦⣀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⢀⣀⣀⣀⣀⣐⣾⣴⣀⣀⣀⣀⣀⡀⡀⡀⡀⡀-->
+<!--⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⠙⢶⣄⡀⡀⡀⡀⡀⡀⡀⠐⢭⣝⡛⠿⣿⣿⣿⣦⣄⠠⣀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⠐⢻⠙⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀-->
+<!--⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⢻⣿⣷⣦⣀⡀⡀⡀⡀⡀⠹⣿⣿⣶⣮⣝⣻⠿⣷⣄⠩⣳⢦⣄⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⢸⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀-->
+<!--⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⠈⢍⣛⠿⢿⣿⣦⣄⡀⡀⡀⢻⣿⣿⣿⣿⣿⣿⣶⣯⣆⡈⠳⣮⣟⠷⣶⣤⣀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⠈⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀-->
+<!--⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⢹⣿⣷⣮⣭⣛⡿⢶⣄⠈⢭⣝⣛⣛⡿⠿⣿⣿⣿⣿⣮⢪⡻⣿⣮⣝⡻⢿⣶⣤⣄⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀-->
+<!--⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⠘⡛⠿⠿⣿⣿⣿⣷⣮⣕⠈⣿⣿⣿⣿⣿⣷⣶⣾⣭⣿⣃⠹⣮⡙⢿⣿⣶⣭⡛⢿⣿⣷⣦⣄⣀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀-->
+<!--⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⠘⣿⣿⣶⣶⣭⣽⣛⡿⠇⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⠘⢿⣦⡙⢿⣿⣿⣷⣮⣙⠿⣿⣿⣿⣶⣤⣀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀-->
+<!--⡀⡀⡀⡀⠑⢦⣄⡀⡀⡀⡀⡀⡀⡀⡀⡀⣿⣿⣿⣿⣿⣿⣿⣿⡀⢛⣛⣛⣛⣛⣛⣛⣛⣿⣿⣿⣿⣅⠈⢿⣿⣷⣝⠿⣿⣿⣿⣷⣦⣍⠉⠉⠉⠉⠉⠑⣂⠴⠂⡀⡀⡀⡀⡀-->
+<!--⡀⡀⡀⡀⡀⠘⠿⣿⣷⣦⣀⡀⡀⡀⡀⡀⢲⣶⣶⣶⣤⣭⣭⣭⣥⡀⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⡀⠻⣿⣿⣷⣌⡀⡀⡀⠈⠉⠙⠒⢀⣠⡴⠋⠁⡀⡀⡀⡀⡀⡀⡀-->
+<!--⡀⡀⡀⡀⡀⡀⠙⣷⣶⣯⣽⣟⣲⠄⡀⡀⢸⣿⣿⣿⣿⣿⣿⣿⣿⠧⢸⣿⣿⣿⣿⣿⣿⡿⠿⠿⣿⣛⣛⡀⡀⠙⠿⠿⠿⣷⣄⡀⡀⢀⣤⣶⠟⠋⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀-->
+<!--⡀⡀⡀⡀⡀⡀⡀⢩⣭⣭⣽⣿⣟⣛⣓⣀⠨⣭⣭⣭⣷⣶⣶⣶⣾⡇⢘⣩⣭⣭⣵⣶⣶⣾⣿⣿⣿⣿⣿⣿⡀⡀⡀⡀⡀⢀⣀⣡⡴⠟⡿⠃⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀-->
+<!--⡀⡀⡀⡀⡀⡀⡀⡀⠿⠿⣿⣿⣿⣿⣿⣛⡀⣿⣿⣿⣿⣿⣿⡿⠿⢿⡀⢻⣿⣿⣿⣿⣿⣿⣿⡿⠿⠟⠛⣉⣠⠤⠴⠒⠛⠉⠁⡀⡀⡸⠁⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀-->
+<!--⡀⡀⡀⡀⡀⡀⡀⡀⢸⣿⣿⣿⠿⠿⣿⣟⡀⣋⣩⣭⣥⣶⣶⣾⣿⣿⡇⢸⡿⠿⠛⠛⢉⣁⠤⠤⠒⠊⠉⠁⡀⡀⡀⡀⡀⡀⡀⡀⡀⡇⡀⡀⠔⣊⣉⡙⠲⡄⡀⡀⡀⡀⡀⡀-->
+<!--⡀⡀⡀⡀⡀⡀⡀⡀⡀⣶⣶⣿⣿⠿⢿⣟⠂⣿⣿⣿⣿⠿⠿⠛⠛⠉⣁⠠⠄⠒⠂⠉⠁⡀⡀⡀⡀⡀⡀⡀⡀⡀⣀⣤⣤⣤⣤⣄⡀⠃⡀⡀⢪⠒⢦⠙⡆⢹⡀⡀⡀⡀⡀⡀-->
+<!--⡀⡀⡀⡀⡀⡀⡀⡀⡀⣭⣽⣶⣾⣿⠿⠟⠐⠋⠉⡀⡀⠄⠐⡀⠈⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⣀⣀⣀⣀⡴⢛⡽⢖⣚⣛⣒⠦⢍⡳⣄⣀⣈⣠⠞⣠⢇⡾⡀⡀⡀⡀⡀⡀-->
+<!--⡀⡀⡀⡀⡀⡀⡀⡀⠐⠛⠉⠉⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡔⠶⡀⢐⠪⠝⠒⠛⠛⠓⠒⠫⠔⠩⡀⡀⡀⠉⠢⠑⠌⠚⠶⣶⡯⠵⠋⡀⡀⡀⡀⡀⡀⡀-->
+<!--⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀-->
+<!--⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀-->

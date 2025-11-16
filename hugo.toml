@@ -9,3 +9,10 @@ Title = "The Praenaris Official Website"
 
 
 
+[params]
+Authors = [
+	"David Tabernero M. (Programming, Design)",
+	"Gabriel Garrido (Design, Concept Art)",
+	"Raúl Blasco (Concept Art)"
+]
+
