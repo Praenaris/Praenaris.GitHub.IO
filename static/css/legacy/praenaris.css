@@ -269,7 +269,7 @@ body {
 
 		#pr-page-contact {
 			background-color: var(--contact--main-color);
-			background-image: url("../images/background-contact.webp");
+			background-image: url("/img/background-contact.webp");
 			background-position: center top;
 			background-repeat: no-repeat;
 		}
@@ -395,7 +395,7 @@ body {
 
 
 .pr-nav-compass {
-	background-image: url("../images/decoration-compass-back.webp");
+	background-image: url("/img/decoration-compass-back.webp");
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
@@ -427,7 +427,7 @@ body {
 					animation-direction: normal;
 					animation-name: CompassRotation_Middle;
 					animation-timing-function: linear;
-					background-image: url("../images/decoration-compass-middle.webp");
+					background-image: url("/img/decoration-compass-middle.webp");
 					height: var(--nav-compass--middle-part--size);
 					width: var(--nav-compass--middle-part--size);
 				}
@@ -436,7 +436,7 @@ body {
 					animation-direction: alternate;
 					animation-name: CompassRotation_Front;
 					animation-timing-function: ease-in-out;
-					background-image: url("../images/decoration-compass-front.webp");
+					background-image: url("/img/decoration-compass-front.webp");
 					height: var(--nav-compass--front-part--size);
 					width: var(--nav-compass--front-part--size);
 				}
@@ -457,14 +457,14 @@ body {
 		.pr-section-big-iceberg {
 			background-image:
 				linear-gradient(var(--base--main-color--transparent) 75%, var(--base--main-color) 100%),
-				url("../images/logo-praenaris-partial-iceberg.webp"),
-				url("../images/background-home-icebergglow.webp"),
-				url("../images/background-home-watersurface.webp"),
-				url("../images/background-home-waterglow.webp"),
-				url("../images/background-home-icebergs.webp"),
-				url("../images/background-home-cloudsandmountains.webp"),
-				url("../images/background-home-auroraborealis.webp"),
-				url("../images/background-home-base.webp"),
+				url("/img/logo-praenaris-partial-iceberg.webp"),
+				url("/img/background-home-icebergglow.webp"),
+				url("/img/background-home-watersurface.webp"),
+				url("/img/background-home-waterglow.webp"),
+				url("/img/background-home-icebergs.webp"),
+				url("/img/background-home-cloudsandmountains.webp"),
+				url("/img/background-home-auroraborealis.webp"),
+				url("/img/background-home-base.webp"),
 				none;
 			background-blend-mode:
 				normal, /* gradient */
@@ -526,12 +526,12 @@ body {
 		.pr-section-small-iceberg {
 			background-image:
 				linear-gradient(var(--base--main-color--transparent) 75%, var(--base--main-color) 100%),
-				url("../images/background-about-icebergs.webp"),
-				url("../images/background-about-watericesmall.webp"),
-				url("../images/background-about-watericebig.webp"),
-				url("../images/background-about-watersurface.webp"),
-				url("../images/background-about-icebergshadows.webp"),
-				url("../images/background-about-base.webp"),
+				url("/img/background-about-icebergs.webp"),
+				url("/img/background-about-watericesmall.webp"),
+				url("/img/background-about-watericebig.webp"),
+				url("/img/background-about-watersurface.webp"),
+				url("/img/background-about-icebergshadows.webp"),
+				url("/img/background-about-base.webp"),
 				none;
 			background-position-x:
 				center, /* gradient */
@@ -677,51 +677,51 @@ body {
 				}
 
 		.pr-contact-item.pr-contact-item-discord {
-			background-image: url("../images/icon-discord-dark.webp");
+			background-image: url("/img/icon-discord-dark.webp");
 		}
 
 				.pr-contact-item.pr-contact-item-discord:hover {
-					background-image: url("../images/icon-discord-light.webp");
+					background-image: url("/img/icon-discord-light.webp");
 				}
 
 		.pr-contact-item.pr-contact-item-email {
-			background-image: url("../images/icon-email-dark.webp");
+			background-image: url("/img/icon-email-dark.webp");
 		}
 
 				.pr-contact-item.pr-contact-item-email:hover {
-					background-image: url("../images/icon-email-light.webp");
+					background-image: url("/img/icon-email-light.webp");
 				}
 
 		.pr-contact-item.pr-contact-item-instagram {
-			background-image: url("../images/icon-instagram-dark.webp");
+			background-image: url("/img/icon-instagram-dark.webp");
 		}
 
 				.pr-contact-item.pr-contact-item-instagram:hover {
-					background-image: url("../images/icon-instagram-light.webp");
+					background-image: url("/img/icon-instagram-light.webp");
 				}
 
 		.pr-contact-item.pr-contact-item-twitter {
-			background-image: url("../images/icon-twitter-dark.webp");
+			background-image: url("/img/icon-twitter-dark.webp");
 		}
 
 				.pr-contact-item.pr-contact-item-twitter:hover {
-					background-image: url("../images/icon-twitter-light.webp");
+					background-image: url("/img/icon-twitter-light.webp");
 				}
 
 		.pr-contact-item.pr-contact-item-twitterx {
-			background-image: url("../images/icon-twitterx-dark.webp");
+			background-image: url("/img/icon-twitterx-dark.webp");
 		}
 
 				.pr-contact-item.pr-contact-item-twitterx:hover {
-					background-image: url("../images/icon-twitterx-light.webp");
+					background-image: url("/img/icon-twitterx-light.webp");
 				}
 
 		.pr-contact-item.pr-contact-item-youtube {
-			background-image: url("../images/icon-youtube-dark.webp");
+			background-image: url("/img/icon-youtube-dark.webp");
 		}
 
 				.pr-contact-item.pr-contact-item-youtube:hover {
-					background-image: url("../images/icon-youtube-light.webp");
+					background-image: url("/img/icon-youtube-light.webp");
 				}
 
 
@@ -774,131 +774,131 @@ body {
 
 
 		.pr-social-item.pr-social-item-applemusic {
-			background-image: url("../images/icon-applemusic-dark.webp");
+			background-image: url("/img/icon-applemusic-dark.webp");
 		}
 
 				.pr-social-item.pr-social-item-applemusic:hover {
-					background-image: url("../images/icon-applemusic-light.webp");
+					background-image: url("/img/icon-applemusic-light.webp");
 				}
 
 		.pr-social-item.pr-social-item-artstation {
-			background-image: url("../images/icon-artstation-dark.webp");
+			background-image: url("/img/icon-artstation-dark.webp");
 		}
 
 				.pr-social-item.pr-social-item-artstation:hover {
-					background-image: url("../images/icon-artstation-light.webp");
+					background-image: url("/img/icon-artstation-light.webp");
 				}
 
 		.pr-social-item.pr-social-item-discord {
-			background-image: url("../images/icon-discord-dark.webp");
+			background-image: url("/img/icon-discord-dark.webp");
 		}
 
 				.pr-social-item.pr-social-item-discord:hover {
-					background-image: url("../images/icon-discord-light.webp");
+					background-image: url("/img/icon-discord-light.webp");
 				}
 
 		.pr-social-item.pr-social-item-email {
-			background-image: url("../images/icon-email-dark.webp");
+			background-image: url("/img/icon-email-dark.webp");
 		}
 
 				.pr-social-item.pr-social-item-email:hover {
-					background-image: url("../images/icon-email-light.webp");
+					background-image: url("/img/icon-email-light.webp");
 				}
 
 		.pr-social-item.pr-social-item-github {
-			background-image: url("../images/icon-github-dark.webp");
+			background-image: url("/img/icon-github-dark.webp");
 		}
 
 				.pr-social-item.pr-social-item-github:hover {
-					background-image: url("../images/icon-github-light.webp");
+					background-image: url("/img/icon-github-light.webp");
 				}
 
 		.pr-social-item.pr-social-item-gitlab {
-			background-image: url("../images/icon-gitlab-dark.webp");
+			background-image: url("/img/icon-gitlab-dark.webp");
 		}
 
 				.pr-social-item.pr-social-item-gitlab:hover {
-					background-image: url("../images/icon-gitlab-light.webp");
+					background-image: url("/img/icon-gitlab-light.webp");
 				}
 
 		.pr-social-item.pr-social-item-instagram {
-			background-image: url("../images/icon-instagram-dark.webp");
+			background-image: url("/img/icon-instagram-dark.webp");
 		}
 
 				.pr-social-item.pr-social-item-instagram:hover {
-					background-image: url("../images/icon-instagram-light.webp");
+					background-image: url("/img/icon-instagram-light.webp");
 				}
 
 		.pr-social-item.pr-social-item-itchio {
-			background-image: url("../images/icon-itchio-dark.webp");
+			background-image: url("/img/icon-itchio-dark.webp");
 		}
 
 				.pr-social-item.pr-social-item-itchio:hover {
-					background-image: url("../images/icon-itchio-light.webp");
+					background-image: url("/img/icon-itchio-light.webp");
 				}
 
 		.pr-social-item.pr-social-item-linkedin {
-			background-image: url("../images/icon-linkedin-dark.webp");
+			background-image: url("/img/icon-linkedin-dark.webp");
 		}
 
 				.pr-social-item.pr-social-item-linkedin:hover {
-					background-image: url("../images/icon-linkedin-light.webp");
+					background-image: url("/img/icon-linkedin-light.webp");
 				}
 
 		.pr-social-item.pr-social-item-mastodon {
-			background-image: url("../images/icon-mastodon-dark.webp");
+			background-image: url("/img/icon-mastodon-dark.webp");
 		}
 
 				.pr-social-item.pr-social-item-mastodon:hover {
-					background-image: url("../images/icon-mastodon-light.webp");
+					background-image: url("/img/icon-mastodon-light.webp");
 				}
 
 		.pr-social-item.pr-social-item-twitter {
-			background-image: url("../images/icon-twitter-dark.webp");
+			background-image: url("/img/icon-twitter-dark.webp");
 		}
 
 				.pr-social-item.pr-social-item-twitter:hover {
-					background-image: url("../images/icon-twitter-light.webp");
+					background-image: url("/img/icon-twitter-light.webp");
 				}
 
 		.pr-social-item.pr-social-item-twitterx {
-			background-image: url("../images/icon-twitterx-dark.webp");
+			background-image: url("/img/icon-twitterx-dark.webp");
 		}
 
 				.pr-social-item.pr-social-item-twitterx:hover {
-					background-image: url("../images/icon-twitterx-light.webp");
+					background-image: url("/img/icon-twitterx-light.webp");
 				}
 
 		.pr-social-item.pr-social-item-spotify {
-			background-image: url("../images/icon-spotify-dark.webp");
+			background-image: url("/img/icon-spotify-dark.webp");
 		}
 
 				.pr-social-item.pr-social-item-spotify:hover {
-					background-image: url("../images/icon-spotify-light.webp");
+					background-image: url("/img/icon-spotify-light.webp");
 				}
 
 		.pr-social-item.pr-social-item-steam {
-			background-image: url("../images/icon-steam-dark.webp");
+			background-image: url("/img/icon-steam-dark.webp");
 		}
 
 				.pr-social-item.pr-social-item-steam:hover {
-					background-image: url("../images/icon-steam-light.webp");
+					background-image: url("/img/icon-steam-light.webp");
 				}
 
 		.pr-social-item.pr-social-item-website {
-			background-image: url("../images/icon-website-dark.webp");
+			background-image: url("/img/icon-website-dark.webp");
 		}
 
 				.pr-social-item.pr-social-item-website:hover {
-					background-image: url("../images/icon-website-light.webp");
+					background-image: url("/img/icon-website-light.webp");
 				}
 
 		.pr-social-item.pr-social-item-youtube {
-			background-image: url("../images/icon-youtube-dark.webp");
+			background-image: url("/img/icon-youtube-dark.webp");
 		}
 
 				.pr-social-item.pr-social-item-youtube:hover {
-					background-image: url("../images/icon-youtube-light.webp");
+					background-image: url("/img/icon-youtube-light.webp");
 				}
 
 
@@ -932,27 +932,27 @@ body {
 
 
 		.pr-store-item.pr-store-item-itchio {
-			background-image: url("../images/icon-itchio-dark.webp");
+			background-image: url("/img/icon-itchio-dark.webp");
 		}
 
 				.pr-store-item.pr-store-item-itchio:hover {
-					background-image: url("../images/icon-itchio-light.webp");
+					background-image: url("/img/icon-itchio-light.webp");
 				}
 
 		.pr-store-item.pr-store-item-psstore {
-			background-image: url("../images/icon-psstore-dark.webp");
+			background-image: url("/img/icon-psstore-dark.webp");
 		}
 
 				.pr-store-item.pr-store-item-psstore:hover {
-					background-image: url("../images/icon-psstore-light.webp");
+					background-image: url("/img/icon-psstore-light.webp");
 				}
 
 		.pr-store-item.pr-store-item-steam {
-			background-image: url("../images/icon-steam-dark.webp");
+			background-image: url("/img/icon-steam-dark.webp");
 		}
 
 				.pr-store-item.pr-store-item-steam:hover {
-					background-image: url("../images/icon-steam-light.webp");
+					background-image: url("/img/icon-steam-light.webp");
 				}
 
 
@@ -1014,15 +1014,15 @@ body {
 
 
 		.pr-project-item.pr-project-item-swan {
-			background-image: url("../images/cover-thesilentswan.webp");
+			background-image: url("/img/cover-thesilentswan.webp");
 		}
 
 		.pr-project-item.pr-project-item-arima {
-			background-image: url("../images/cover-arimalodge.webp");
+			background-image: url("/img/cover-arimalodge.webp");
 		}
 
 		.pr-project-item.pr-project-item-embers {
-			background-image: url("../images/cover-embersoftheevening.webp");
+			background-image: url("/img/cover-embersoftheevening.webp");
 		}
 
 
@@ -1150,7 +1150,7 @@ body {
 					height: var(--staff-list-item-portrait-compass--size);
 					left: 0;
 					margin: auto;
-					mask-image: url("../images/decoration-compass-middle.webp");
+					mask-image: url("/img/decoration-compass-middle.webp");
 					mask-position: center bottom;
 					mask-repeat: no-repeat;
 					mask-size: contain;
@@ -1161,47 +1161,47 @@ body {
 
 
 				.pr-staff-item.pr-staff-item-andoni > .pr-staff-item-portrait {
-					background-image: url("../images/portrait-andoni.webp");
+					background-image: url("/img/portrait-andoni.webp");
 				}
 
 				.pr-staff-item.pr-staff-item-carlos > .pr-staff-item-portrait {
-					background-image: url("../images/portrait-carlos.webp");
+					background-image: url("/img/portrait-carlos.webp");
 				}
 
 				.pr-staff-item.pr-staff-item-ekain > .pr-staff-item-portrait {
-					background-image: url("../images/portrait-ekain.webp");
+					background-image: url("/img/portrait-ekain.webp");
 				}
 
 				.pr-staff-item.pr-staff-item-francisco > .pr-staff-item-portrait {
-					background-image: url("../images/portrait-francisco.webp");
+					background-image: url("/img/portrait-francisco.webp");
 				}
 
 				.pr-staff-item.pr-staff-item-hector > .pr-staff-item-portrait {
-					background-image: url("../images/portrait-hector.webp");
+					background-image: url("/img/portrait-hector.webp");
 				}
 
 				.pr-staff-item.pr-staff-item-miguel > .pr-staff-item-portrait {
-					background-image: url("../images/portrait-miguel.webp");
+					background-image: url("/img/portrait-miguel.webp");
 				}
 
 				.pr-staff-item.pr-staff-item-nidai > .pr-staff-item-portrait {
-					background-image: url("../images/portrait-nidai.webp");
+					background-image: url("/img/portrait-nidai.webp");
 				}
 
 				.pr-staff-item.pr-staff-item-raul > .pr-staff-item-portrait {
-					background-image: url("../images/portrait-raul.webp");
+					background-image: url("/img/portrait-raul.webp");
 				}
 
 				.pr-staff-item.pr-staff-item-solanis > .pr-staff-item-portrait {
-					background-image: url("../images/portrait-solanis.webp");
+					background-image: url("/img/portrait-solanis.webp");
 				}
 
 				.pr-staff-item.pr-staff-item-tabernero > .pr-staff-item-portrait {
-					background-image: url("../images/portrait-tabernero.webp");
+					background-image: url("/img/portrait-tabernero.webp");
 				}
 
 				.pr-staff-item.pr-staff-item-xabi > .pr-staff-item-portrait {
-					background-image: url("../images/portrait-xabi.webp");
+					background-image: url("/img/portrait-xabi.webp");
 				}
 
 
@@ -1225,7 +1225,7 @@ body {
 		}
 
 		.pr-button::after {
-			-webkit-mask-image: url("../images/decoration-diamond-line.webp");
+			-webkit-mask-image: url("/img/decoration-diamond-line.webp");
 			-webkit-mask-position: center bottom;
 			-webkit-mask-repeat: no-repeat;
 			-webkit-mask-size: contain;
@@ -1233,7 +1233,7 @@ body {
 			content: "";
 			display: block;
 			height: var(--general--button--vertical-padding);
-			mask-image: url("../images/decoration-diamond-line.webp");
+			mask-image: url("/img/decoration-diamond-line.webp");
 			mask-position: center bottom;
 			mask-repeat: no-repeat;
 			mask-size: contain;
@@ -1272,14 +1272,14 @@ body {
 		}
 
 		.pr-control-item.pr-control-item-close {
-			background-image: url("../images/control-close.webp");
+			background-image: url("/img/control-close.webp");
 		}
 
 
 
 
 #pr-loading {
-	/*background-image: url("../images/logo-praenaris-partial-loading.webp");*/
+	/*background-image: url("/img/logo-praenaris-partial-loading.webp");*/
 	backdrop-filter: blur(40px);
 	background-color: var(--base--main-color);
 	background-position: center;
@@ -1339,15 +1339,15 @@ body {
 		}
 
 				.pr-overlay-container.pr-overlay-container-swan {
-					background-image: url("../images/picture-thesilentswan.webp");
+					background-image: url("/img/picture-thesilentswan.webp");
 				}
 
 				.pr-overlay-container.pr-overlay-container-arima {
-					background-image: url("../images/picture-arimalodge.webp");
+					background-image: url("/img/picture-arimalodge.webp");
 				}
 
 				.pr-overlay-container.pr-overlay-container-embers {
-					background-image: url("../images/picture-embersoftheevening.webp");
+					background-image: url("/img/picture-embersoftheevening.webp");
 				}
 
 
@@ -1434,7 +1434,7 @@ body {
 
 
 		.pr-section#pr-section-small-iceberg > .pr-section-background-module {
-			background-image: url("../images/background-about-icebergmodule.webp");
+			background-image: url("/img/background-about-icebergmodule.webp");
 			height: 641px;
 			width: calc(var(--nav-bar--padding--side) - 592px);
 		}

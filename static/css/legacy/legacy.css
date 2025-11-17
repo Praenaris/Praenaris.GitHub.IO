@@ -17,8 +17,8 @@
 	--selection--background-color: var(--base--main-color--darker);
 	--selection--font-color: var(--base--main-color--accent--lighter);
 
-	--image--texture--jade: url("../images/texture-jade.png");
-	/*--image--background--jade: url("../images/background-repeatable.jpg");*/
+	--image--texture--jade: url("/img/texture-jade.png");
+	/*--image--background--jade: url("/img/background-repeatable.jpg");*/
 
 	--general--animation--loop--duration--normal: 3.5s;
 	--general--border-width: 2px;
@@ -115,7 +115,7 @@ html {
 
 
 body {
-	background-image: url("../images/background-repeatable.jpg");
+	background-image: url("/img/background-repeatable.jpg");
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -167,7 +167,7 @@ nav {
 					flex-grow: 0;
 					flex-shrink: 0;
 					height: 100%;
-					mask-image: url("../images/logo-praenaris-title-medium.png");
+					mask-image: url("/img/logo-praenaris-title-medium.png");
 					mask-position: center;
 					mask-repeat: no-repeat;
 				}
@@ -325,7 +325,7 @@ section {
 				section.Overlay#LoadingSection {
 					/*box-shadow: 0px 0px 50vw 25vw var(--base--main-color--darker);*/
 					background-color: var(--base--main-color--darker);
-					background-image: url("../images/logo-praenaris-minimal-medium-watermark.png");
+					background-image: url("/img/logo-praenaris-minimal-medium-watermark.png");
 					background-position: center;
 					background-repeat: no-repeat;
 					left: 150%;
@@ -374,37 +374,37 @@ section {
 
 
 						section.Content.Shown#OurHome {
-							background-image: url("../images/background-opensea.jpg");
+							background-image: url("/img/background-opensea.jpg");
 							height: auto;
 						}
 
 
 						section.Content.Shown#OurWorlds {
-							background-image: url("../images/background-kilgarvan.jpg");
+							background-image: url("/img/background-kilgarvan.jpg");
 							height: auto;
 						}
 
 
 						section.Content.Shown#AboutUs {
-							background-image: url("../images/background-opensea.jpg");
+							background-image: url("/img/background-opensea.jpg");
 							height: auto;
 						}
 
 
 						section.Content.Shown#PressKit {
-							background-image: url("../images/background-opensea.jpg");
+							background-image: url("/img/background-opensea.jpg");
 							height: auto;
 						}
 
 
 						section.Content.Shown#ContactUs {
-							background-image: url("../images/background-opensea.jpg");
+							background-image: url("/img/background-opensea.jpg");
 							height: auto;
 						}
 
 
 						section.Content.Shown#NotFound {
-							background-image: url("../images/background-opensea.jpg");
+							background-image: url("/img/background-opensea.jpg");
 							filter: grayscale(50%);
 							height: 100vh;
 						}
@@ -547,7 +547,7 @@ section {
 
 
 /*div#RepeatableBackground {
-	background-image: url("../images/background-repeatable.jpg");
+	background-image: url("/img/background-repeatable.jpg");
 	background-position: center;
 	background-repeat: repeat-x;
 	background-size: auto 100%;

@@ -6,14 +6,14 @@
 
 	window.onload = initialize;
 
-	async function initialize()
+	/*async*/ function initialize()
 	{
 		console.log("Initializing scripts...");
 		{
 			changeColorMode();
 			removeWhitespaces();
-			await loadData();
-			await cacheImages();
+			//await loadData();
+			//await cacheImages();
 		}
 		console.log("Scripts initialized!");
 
