@@ -1,2 +1,35 @@
-<nav>
+<nav id="pr-nav-bar">
+
+	<ul class="pr-nav-list left-aligned">
+
+		{{ range .Site.Menus.left }}
+		<li>
+			<a class="pr-nav-button {{ if $.IsMenuCurrent .Menu . }}selected{{ end }}" href="{{ .URL }}">{{ .Name }}</a>
+		</li>
+		{{ end }}
+
+		<li>
+			<a class="pr-nav-button" href="/#pr-section-works">Our Works</a>
+		</li>
+
+	</ul>
+
+	<a class="pr-nav-compass" href="./">
+		<div class="pr-nav-compass-part"></div><div class="pr-nav-compass-part"></div>
+	</a>
+
+	<ul class="pr-nav-list right-aligned">
+
+		<!--<li>
+			<a class="pr-nav-button" target="_blank" href="https://drive.google.com/drive/folders/13R8mnC3lGNkXKFQEvTMbwD4sYJH67MdD">Press Kit</a>
+		</li>-->
+
+		{{ range .Site.Menus.right }}
+		<li>
+			<a class="pr-nav-button {{ if $.IsMenuCurrent .Menu . }}selected{{ end }}" href="{{ .URL }}">{{ .Name }}</a>
+		</li>
+		{{ end }}
+
+	</ul>
+
 </nav>
