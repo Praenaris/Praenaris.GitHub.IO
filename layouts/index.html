@@ -18,7 +18,7 @@
 					{{ $time := time . }}
 					<p>Release date: <b>{{ $time.Format "January 2" }}<sup>{{ substr (humanize $time.Day) -2 }}</sup> {{ $time.Format "2006" }}</b>.</p>
 					{{ else }}
-					<p>Release date: <b>TBD</b>.</p>
+					<p><b>Still in development</b>.</p>
 				{{ end }}
 			</div>
 

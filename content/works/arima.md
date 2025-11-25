@@ -10,8 +10,7 @@ FullDescription:
 BehindScenesSummary:
   - "Arima Lodge was a jam game that came out of the Indie Spain Jam of 2022. It is currently being reworked with new content and several QoL changes to come out on other platforms."
 
-CoverLink: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3310190/482e4cd06875d880dc0b55fd6c463286a12ee26c/library_600x900_2x.jpg"
-BannerLink: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3310190/8faaa2278a86ce560ce7a97e9babf3beb2cc4e73/library_hero_2x.jpg"
+CoverLink: "/img/covers/arima.png"
 PictureLink: "/img/pictures/arima.png"
 ReleaseDate: 2024-12-10
 MainDeveloper: "Praenaris"

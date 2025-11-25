@@ -9,8 +9,7 @@ FullDescription:
 BehindScenesSummary:
   - ""
 
-CoverLink: ""
-BannerLink: ""
+CoverLink: "/img/covers/unclouded.png"
 PictureLink: "/img/pictures/unclouded.png"
 ReleaseDate: null
 MainDeveloper: "Praenaris"

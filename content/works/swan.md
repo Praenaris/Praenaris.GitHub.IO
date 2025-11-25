@@ -11,8 +11,7 @@ FullDescription:
 BehindScenesSummary:
   - "The Silent Swan is the debut videogame of Praenaris. It began development as a university project entitled Project Circenses in late 2020. Originally thought as an oversized walking simulator to showcase the 3D work of the team, it ballooned into the game it now is after joining the PlayStation Talents program."
 
-CoverLink: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1898880/library_600x900_2x.jpg"
-BannerLink: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1898880/library_hero_2x.jpg"
+CoverLink: "/img/covers/swan.png"
 PictureLink: "/img/pictures/swan.png"
 ReleaseDate: 2023-11-02
 MainDeveloper: "Praenaris"

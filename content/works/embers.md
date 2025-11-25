@@ -10,8 +10,7 @@ FullDescription:
 BehindScenesSummary:
   - "Embers of the Evening is the second fully-fledged indie videogame by Praenaris. It began development in late 2022 under the title of Project Umbra."
 
-CoverLink: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2706010/library_600x900_2x.jpg"
-BannerLink: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2706010/library_hero_2x.jpg"
+CoverLink: "/img/covers/embers.png"
 PictureLink: "/img/pictures/embers.png"
 ReleaseDate: null
 MainDeveloper: "Praenaris"

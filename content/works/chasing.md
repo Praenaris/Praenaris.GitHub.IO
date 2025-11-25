@@ -5,12 +5,11 @@ Draft: false
 
 ProjectTitle: "Nemo"
 FullDescription:
-  - "(Coming soon)"
+  - "Chasing the Sun is a short, illustrated story that talks about a man who finds himself stranded between two separate worlds, unsure of which of both he truly belongs to."
 BehindScenesSummary:
-  - ""
+  - "Chasing the Sun emerged from what was initially an idea for a dystopian video game project, which later evolved into an illustrated tale, focusing on both the plot and the illustrations to tell a story."
 
-CoverLink: ""
-BannerLink: ""
+CoverLink: "/img/covers/chasing.png"
 PictureLink: "/img/pictures/chasing.png"
 ReleaseDate: 2025-11-23
 MainDeveloper: "Praenaris"
