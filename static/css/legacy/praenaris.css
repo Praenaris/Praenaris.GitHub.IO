@@ -931,31 +931,6 @@ body {
 				}
 
 
-		.pr-store-item.pr-store-item-itchio {
-			background-image: url("/img/icon-itchio-dark.webp");
-		}
-
-				.pr-store-item.pr-store-item-itchio:hover {
-					background-image: url("/img/icon-itchio-light.webp");
-				}
-
-		.pr-store-item.pr-store-item-psstore {
-			background-image: url("/img/icon-psstore-dark.webp");
-		}
-
-				.pr-store-item.pr-store-item-psstore:hover {
-					background-image: url("/img/icon-psstore-light.webp");
-				}
-
-		.pr-store-item.pr-store-item-steam {
-			background-image: url("/img/icon-steam-dark.webp");
-		}
-
-				.pr-store-item.pr-store-item-steam:hover {
-					background-image: url("/img/icon-steam-light.webp");
-				}
-
-
 
 
 .pr-project-list {
@@ -1011,19 +986,6 @@ body {
 						.pr-project-list .pr-project-item:hover > span {
 							background-image: linear-gradient(var(--base--main-color--transparent), var(--base--main-color--translucent));
 						}
-
-
-		.pr-project-item.pr-project-item-swan {
-			background-image: url("/img/cover-thesilentswan.webp");
-		}
-
-		.pr-project-item.pr-project-item-arima {
-			background-image: url("/img/cover-arimalodge.webp");
-		}
-
-		.pr-project-item.pr-project-item-embers {
-			background-image: url("/img/cover-embersoftheevening.webp");
-		}
 
 
 
@@ -1337,19 +1299,6 @@ body {
 			top: 0;
 			width: var(--overlay-container--width);
 		}
-
-				.pr-overlay-container.pr-overlay-container-swan {
-					background-image: url("/img/picture-thesilentswan.webp");
-				}
-
-				.pr-overlay-container.pr-overlay-container-arima {
-					background-image: url("/img/picture-arimalodge.webp");
-				}
-
-				.pr-overlay-container.pr-overlay-container-embers {
-					background-image: url("/img/picture-embersoftheevening.webp");
-				}
-
 
 				.pr-overlay-container .pr-control-item-close {
 					position: absolute;

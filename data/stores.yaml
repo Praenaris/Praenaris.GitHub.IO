@@ -1,0 +1,19 @@
+PlayStation:
+  name: "PlayStation Store"
+  image: "/img/stores/psstore.svg"
+
+Steam:
+  name: "Steam"
+  image: "/img/stores/steam.svg"
+
+Itchio:
+  name: "itch.io"
+  image: "/img/stores/itchio.svg"
+
+EpicGames:
+  name: "Epic Games Store"
+  image: "/img/stores/epicgames.svg"
+
+GOG:
+  name: "GOG"
+  image: "/img/stores/gog.svg"
