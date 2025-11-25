@@ -25,8 +25,8 @@
 			<ul class="pr-store-list pr-overlay-store">
 				{{ with .Params.Links }}{{ range . }}
 				{{ $store := index site.Data.stores .store }}
-				<li>
-					<a class="pr-store-item" target="_blank" style="background-image: url('{{ $store.image }}');" href="{{ .link }}"></a>
+				<li class="pr-store-item">
+					<a target="_blank" style="mask-image: url('{{ $store.image }}');" href="{{ .link }}"></a>
 				</li>
 				{{ end }}{{ end }}
 			</ul>

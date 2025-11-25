@@ -909,26 +909,31 @@ body {
 	list-style: none;
 }
 
-		.pr-store-list > * {
-			aspect-ratio: 1 / 1;
-			display: inline-block;
-			height: 100%;
-		}
-
-		.pr-store-list .pr-store-item {
-			background-color: transparent;
-			background-position: center;
-			background-repeat: no-repeat;
-			background-size: var(--store-list-item--image-size);
-			border-radius: 100%;
-			display: block;
-			height: 100%;
-			width: 100%;
-		}
-
-				.pr-store-list .pr-store-item:hover {
-					background-color: var(--base--text-color);
+				.pr-store-list > .pr-store-item {
+					aspect-ratio: 1 / 1;
+					background-color: transparent;
+					border-radius: 100%;
+					display: inline-block;
+					height: 100%;
 				}
+
+					.pr-store-list > .pr-store-item:hover {
+						background-color: var(--base--text-color);
+					}
+
+								.pr-store-list > .pr-store-item > a {
+									background-color: var(--base--text-color);
+									display: block;
+									height: 100%;
+									mask-position: center;
+									mask-repeat: no-repeat;
+									mask-size: var(--store-list-item--image-size);
+									width: 100%;
+								}
+
+									.pr-store-list > .pr-store-item > a:hover {
+										background-color: var(--base--main-color);
+									}
 
 
 
