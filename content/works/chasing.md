@@ -21,4 +21,6 @@ Publishers:
 Links:
   - store: "Amazon"
     link: "https://www.amazon.es/dp/B0G3LY4L5S"
+  - store: "Itchio"
+    link: "https://praenaris.itch.io/chasing-the-sun"
 ---
