@@ -108,7 +108,7 @@
 		<h1>Our Works</h1>
 		<h3>Land ho!</h3>
 		<ul class="pr-project-list">
-			{{ range (sort (where .Site.RegularPages "Section" "works") "Params.ReleaseDate" "asc") }}
+			{{ range (sort (where .Site.RegularPages "Section" "works") "Date" "asc") }}
 			<li>
 				<a class="pr-project-item" style="background-image: url('{{ .Params.CoverLink }}');" onclick="showOverlayContainerById('pr-overlay-{{ .File.BaseFileName }}', true, event)">
 					<!--<span>{{ .Title }}</span>-->
