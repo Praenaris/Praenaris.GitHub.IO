@@ -11,9 +11,9 @@
 
 			<div class="pr-overlay-content">
 				<h5>{{ .Title }}</h5>
-				{{ range .Params.FullDescription }}<p>{{ . }}</p>{{ end }}
+				{{ range .Params.FullDescription }}<p>{{ . | markdownify }}</p>{{ end }}
 				<p class="pr-header">Behind the scenes summary</p>
-				{{ range .Params.BehindScenesSummary }}<p>{{ . }}</p>{{ end }}
+				{{ range .Params.BehindScenesSummary }}<p>{{ . | markdownify }}</p>{{ end }}
 				{{ with .Params.ReleaseDate }}
 					{{ $time := time . }}
 					<p>Release date: <b>{{ $time.Format "January 2" }}<sup>{{ substr (humanize $time.Day) -2 }}</sup> {{ $time.Format "2006" }}</b>.</p>

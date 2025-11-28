@@ -9,7 +9,7 @@ FullDescription:
   - "The levels the player will traverse are megalithic urban areas, much larger and expansive than there is any need for, which the player will cross following different objectives, as the story gradually unravels around them."
   - "The Silent Swan is the story of two cities: Urzhum and Sernur; of two conflicts: past and future; and of two people; Selene and Mirov."
 BehindScenesSummary:
-  - "The Silent Swan is the debut videogame of Praenaris. It began development as a university project entitled Project Circenses in late 2020. Originally thought as an oversized walking simulator to showcase the 3D work of the team, it ballooned into the game it now is after joining the PlayStation Talents program."
+  - "The Silent Swan is the debut videogame of Praenaris. It began production in late 2020 under the internal name of _Project Circenses_, illustrating the circus-like process of its development that had been foreseen since its conception. Originally thought as an oversized walking simulator to showcase the 3D work of the team, it ballooned into the game it is now after joining the PlayStation Talents program."
 
 CoverLink: "/img/covers/swan.png"
 PictureLink: "/img/pictures/swan.png"
