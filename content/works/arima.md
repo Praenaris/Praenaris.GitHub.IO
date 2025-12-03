@@ -12,6 +12,7 @@ BehindScenesSummary:
 
 CoverLink: "/img/covers/arima.png"
 PictureLink: "/img/pictures/arima.png"
+InDevelopment: false
 ReleaseDate: 2024-12-10
 MainDeveloper: "Praenaris"
 Developers:

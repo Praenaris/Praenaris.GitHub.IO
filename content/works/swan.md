@@ -13,6 +13,7 @@ BehindScenesSummary:
 
 CoverLink: "/img/covers/swan.png"
 PictureLink: "/img/pictures/swan.png"
+InDevelopment: false
 ReleaseDate: 2023-11-02
 MainDeveloper: "Praenaris"
 Developers:

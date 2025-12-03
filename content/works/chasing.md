@@ -11,6 +11,7 @@ BehindScenesSummary:
 
 CoverLink: "/img/covers/chasing.png"
 PictureLink: "/img/pictures/chasing.png"
+InDevelopment: false
 ReleaseDate: 2025-11-23
 MainDeveloper: "Praenaris"
 Developers:

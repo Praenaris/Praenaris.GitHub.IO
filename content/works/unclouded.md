@@ -11,6 +11,7 @@ BehindScenesSummary:
 
 CoverLink: "/img/covers/unclouded.png"
 PictureLink: "/img/pictures/unclouded.png"
+InDevelopment: true
 ReleaseDate: null
 MainDeveloper: "Praenaris"
 Developers:

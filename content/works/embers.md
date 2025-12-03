@@ -12,6 +12,7 @@ BehindScenesSummary:
 
 CoverLink: "/img/covers/embers.png"
 PictureLink: "/img/pictures/embers.png"
+InDevelopment: false
 ReleaseDate: null
 MainDeveloper: "Praenaris"
 Developers:
