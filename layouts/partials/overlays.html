@@ -1,0 +1,37 @@
+<aside id="pr-overlay" class="hidden" onclick="hideOverlay(true, event)">
+
+	{{ range (where .Site.RegularPages "Section" "works") }}
+	<div id="pr-overlay-{{ .File.BaseFileName }}" class="pr-overlay-container hidden" style="background-image: url('{{ .Params.PictureLink }}');">
+		<div class="pr-overlay-gradient"></div>
+
+		<div class="pr-overlay-content">
+			<h5>{{ .Title }}</h5>
+			{{ range .Params.FullDescription }}<p>{{ . | markdownify }}</p>{{ end }}
+			<p class="pr-header">Behind the scenes summary</p>
+			{{ range .Params.BehindScenesSummary }}<p>{{ . | markdownify }}</p>{{ end }}
+			{{ with .Params.ReleaseDate }}
+				{{ $time := time . }}
+				<p>Released on <b>{{ $time.Format "January 2" }}<sup>{{ substr (humanize $time.Day) -2 }}</sup> {{ $time.Format "2006" }}</b>.</p>
+			{{ else }}
+				{{ if .Params.InDevelopment }}
+					<p>Release date <b>to be determined</b>.</p>
+				{{ else }}
+					<p>Its development has been <b>cancelled</b>.</p>
+				{{ end }}
+			{{ end }}
+		</div>
+
+		<ul class="pr-store-list pr-overlay-store">
+			{{ with .Params.Links }}{{ range . }}
+			{{ $store := index site.Data.stores .store }}
+			<li class="pr-store-item">
+				<a target="_blank" style="mask-image: url('{{ $store.image }}');" href="{{ .link }}"></a>
+			</li>
+			{{ end }}{{ end }}
+		</ul>
+
+		<a class="pr-control-item pr-control-item-close" onclick="hideOverlayContainer(this.parentElement, true, event)"></a>
+	</div>
+	{{ end }}
+
+</aside>
