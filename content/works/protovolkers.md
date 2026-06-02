@@ -6,12 +6,15 @@ Draft: true
 ProjectTitle: "Protovolkers"
 FullDescription:
   - ""
+
+
 BehindScenesSummary:
   - ""
 
 CoverLink: "/img/covers/protovolkers.png"
 PictureLink: "/img/pictures/protovolkers.png"
 InDevelopment: true
+DemoDate: null
 ReleaseDate: null
 MainDeveloper: "Praenaris"
 Developers:

@@ -1,6 +1,6 @@
 ---
 Title: "The Silent Swan"
-Date: 2021-09-24
+Date: 2020-09-24
 Draft: false
 
 ProjectTitle: "Circenses"
@@ -14,6 +14,7 @@ BehindScenesSummary:
 CoverLink: "/img/covers/swan.png"
 PictureLink: "/img/pictures/swan.png"
 InDevelopment: false
+DemoDate: 2021-12-24
 ReleaseDate: 2023-11-02
 MainDeveloper: "Praenaris"
 Developers:

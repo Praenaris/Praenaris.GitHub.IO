@@ -6,12 +6,15 @@ Draft: true
 ProjectTitle: "Yuhua"
 FullDescription:
   - ""
+
+
 BehindScenesSummary:
   - ""
 
 CoverLink: "/img/covers/yuhua.png"
 PictureLink: "/img/pictures/yuhua.png"
 InDevelopment: true
+DemoDate: null
 ReleaseDate: null
 MainDeveloper: "Praenaris"
 Developers:
@@ -20,6 +23,8 @@ Publishers:
   - "Praenaris"
 
 Links:
+
+
   - store: "Itchio"
     link: "https://praenaris.itch.io/yuhua"
 ---
