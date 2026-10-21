@@ -1,0 +1,21 @@
+{{ define "body" }}
+<body id="pr-page-privacy">
+
+
+	{{ partial "nav.html" . }}
+
+
+	<section id="pr-section-privacy" class="pr-section pr-section-privacy">
+		<h1>{{ .Title }}</h1>
+		{{ if not .Lastmod.IsZero }}
+		<p><i>Last updated: {{ .Lastmod.Format "January 2" }}<sup>{{ substr (humanize .Lastmod.Day) -2 }}</sup> {{ .Lastmod.Format "2006" }}.</i></p>
+		{{ end }}
+		{{ .Content }}
+	</section>
+
+
+	{{ partial "copyright.html" . }}
+
+
+</body>
+{{ end }}

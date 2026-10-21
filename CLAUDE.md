@@ -7,7 +7,7 @@ The site is being migrated from an older hand-written HTML/JS site into Hugo, an
 
 ## Commands
 
-- `hugo serve` runs the dev server at http://localhost:1313/. `serve.cmd` does the same and opens the browser. It is git-ignored and local only.
+- `hugo serve` runs the dev server at http://localhost:1313/. Claude's preview (`.claude/launch.json`) uses port 1314 so it doesn't clash with yours. `serve.cmd` does the same and opens the browser. It is git-ignored and local only.
 - `hugo` builds to `public/`, which is git-ignored and must never be edited by hand.
 - Hugo extended v0.151 is installed locally. CI uses `hugo_extended:latest`.
 - There are no tests, linters or npm packages. The only check is that `hugo` builds without errors.
@@ -26,12 +26,14 @@ No theme is used (`themes/` is empty). The site's own layouts do everything.
 - `layouts/_default/baseof.html`: the HTML skeleton. Each page layout fills `{{ define "body" }}` with its own `<body id="pr-page-…">`.
 - `layouts/index.html`: the home page (hero, works grid, workshop, copyright).
 - `layouts/about/list.html`, `layouts/contact/list.html`: section pages. Their text is hardcoded in the layout. The `_index.md` files only hold the title and menu weight.
+- `layouts/privacy/list.html`: renders the Markdown body of `content/privacy/_index.md`. The privacy notice is the only page whose text lives in Markdown. The "Last updated" line comes from the `lastmod` front-matter field, so bump it whenever the notice changes. Use `##` for its subheadings, which are styled like `p.pr-header`. Lists and tables have no styling yet. It's linked from the footer, not the nav.
 - `layouts/works/list.html`: empty for now. Works are shown on the home page and as overlays, not on their own pages.
 - `layouts/partials/`:
 	- `head.html`: `<head>` with Google Fonts (Crimson Text, Work Sans), normalize.css, the legacy CSS and the JS files.
 	- `nav.html`: the nav bar. The left and right lists come from `.Site.Menus.left` and `.Site.Menus.right`, set in front matter (`menu.left.weight`, `menu.right.weight`). "Our Works" is a hardcoded link to `/#pr-section-works`.
 	- `overlays.html`: one hidden overlay per work (`#pr-overlay-<filename>`), built from the works' front matter. Pages that link to works include it.
-	- `copyright.html`: the footer.
+	- `copyright.html`: the footer, with the copyright line and the Privacy Notice link.
+- `layouts/_default/_markup/render-link.html`: render hook for Markdown links, including the works' `markdownify` descriptions. It opens `http`/`https` links in a new tab, like the hand-written links. `mailto:` and site links keep the default.
 - `data/stores.yaml`: store keys (`Steam`, `Itchio`, `GOG`…) mapped to a display name and an SVG icon in `static/img/stores/`.
 - `static/css/legacy/`: the stylesheets actually in use (`general.css`, `praenaris.css`, `praenaris-mobile.css`). `legacy.css` is not linked anywhere. `static/css/*.css` (`main`, `nav`, `body`, `footer`, `_default`) are empty placeholders for the planned CSS rework.
 - `static/js/`: plain scripts with no bundler. `main.js` runs the init on `window.onload`, `overlay_manager.js` shows and hides work overlays, `color_mode_switcher.js` swaps the favicon for dark mode, `whitespace_remover.js` removes whitespace-only text nodes. The `_LEGACY_*.js` files are not used.

@@ -623,6 +623,29 @@ body {
 			padding-top: var(--copyright-section--padding-top);
 		}
 
+				.pr-section-copyright > h6 > a {
+					color: var(--base--text-color--accent);
+					font-weight: 700;
+				}
+
+				.pr-section-copyright > h6 > a:hover {
+					text-decoration: underline;
+				}
+
+
+		.pr-section-privacy {
+			padding-top: calc(var(--nav-bar--height) + 48px);
+		}
+
+				.pr-section-privacy > h2 {
+					font-family: var(--general--p--font-family--header);
+					font-size: var(--general--p--font-size--header);
+					font-weight: var(--general--p--font-weight--header);
+					margin: var(--general--p--margin--header);
+					max-width: var(--small-iceberg-section--max-width);
+					text-align: left;
+				}
+
 
 
 
