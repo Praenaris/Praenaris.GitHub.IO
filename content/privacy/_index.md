@@ -41,8 +41,6 @@ This website is hosted on [GitLab Pages](https://about.gitlab.com/privacy/), whi
 
 Under the General Data Protection Regulation (GDPR), you have the right to access, correct or delete the personal information we hold about you, to restrict or object to its use, and to receive a copy of it. To exercise any of these rights, write to us at [contact@praenaris.com](mailto:contact@praenaris.com).
 
-If you believe we have not handled your information properly, you can also file a complaint with the Spanish Data Protection Agency ([AEPD](https://www.aepd.es/)).
-
 
 ## Children
 
@@ -52,8 +50,3 @@ We do not knowingly collect any information from anyone, including children. If 
 ## Changes
 
 We will publish any change to this notice on this page and update the date above.
-
-
-## Contact
-
-For any question, write to us at [contact@praenaris.com](mailto:contact@praenaris.com).
