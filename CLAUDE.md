@@ -81,7 +81,6 @@ To add a work, create the file, add its cover and picture images, and add any ne
 Mention these if they're relevant to a task, but don't fix them unasked:
 
 - `head.html` loads `/js/data_loader.js` and `/js/image_cacher.js`, which no longer exist (they were renamed to `_LEGACY_*`), so both requests return 404.
-- Favicon paths still use the old `./images/…` folder (in `head.html` and `color_mode_switcher.js`). The files are now in `/img/`.
 - `main.js` adds `loaded` to `#pr-loading`, but the loading screen is commented out on every page. The call throws on load.
 - The home hero links to `./about.html`, which is a leftover URL from the old site. The real URL is `/about/`.
 - `content/works/_index.md` has its menu entry commented out, and `layouts/works/list.html` is empty.

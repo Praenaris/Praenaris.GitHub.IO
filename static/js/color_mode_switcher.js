@@ -25,10 +25,10 @@ function changeFavicon()
 		faviconElement.rel = "icon";
 
 		if (isDarkMode) {
-			faviconElement.href = "./images/favicon-dark.png";
+			faviconElement.href = "/img/favicon-dark.png";
 		}
 		else {
-			faviconElement.href = "./images/favicon-light.png";
+			faviconElement.href = "/img/favicon-light.png";
 		}
 
 		document.head.appendChild(faviconElement)
