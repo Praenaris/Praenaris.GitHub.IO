@@ -11,16 +11,20 @@ The site is being migrated from an older hand-written HTML/JS site into Hugo, an
 - `hugo` builds to `public/`, which is git-ignored and must never be edited by hand.
 - Hugo extended v0.151 is installed locally. CI uses `hugo_extended:latest`.
 - There are no tests, linters or npm packages. The only check is that `hugo` builds without errors.
+- Drafts (`Draft: true`) are left out of both commands. Use `hugo serve -D` to preview them.
+- Images and other binaries are stored with Git LFS (see `.gitattributes`). A clone without LFS gets text pointers instead of images, so the site builds but shows no pictures.
 
 
 ## Deployment
 
 GitLab (`gitlab.com/praenaris/web-praenaris`) runs `.gitlab-ci.yml`. A push to `master` builds and publishes to GitLab Pages, so every commit on `master` goes live. Other branches only run a test build.
 
+This checkout's `origin` is the GitHub copy (`github.com/Praenaris/Praenaris.GitHub.IO`), which has no CI of its own. Pushing to it doesn't publish anything.
+
 
 ## Structure
 
-No theme is used (`themes/` is empty). The site's own layouts do everything.
+No theme is used, and there is no `themes/`, `assets/`, `archetypes/` or `i18n/` folder. The site's own layouts do everything.
 
 - `hugo.toml`: site config. `DisableKinds = ["taxonomy"]`. `params.Authors` fills the author `<meta>` tags.
 - `layouts/_default/baseof.html`: the HTML skeleton. Each page layout fills `{{ define "body" }}` with its own `<body id="pr-page-…">`.
@@ -29,18 +33,20 @@ No theme is used (`themes/` is empty). The site's own layouts do everything.
 - `layouts/privacy/list.html`: renders the Markdown body of `content/privacy/_index.md`. The privacy notice is the only page whose text lives in Markdown. The "Last updated" line comes from the `lastmod` front-matter field, so bump it whenever the notice changes. Use `##` for its subheadings, which are styled like `p.pr-header`. Lists and tables have no styling yet. It's linked from the footer, not the nav.
 - `layouts/works/list.html`: empty for now. Works are shown on the home page and as overlays, not on their own pages.
 - `layouts/partials/`:
-	- `head.html`: `<head>` with Google Fonts (Crimson Text, Work Sans), normalize.css, the legacy CSS and the JS files.
-	- `nav.html`: the nav bar. The left and right lists come from `.Site.Menus.left` and `.Site.Menus.right`, set in front matter (`menu.left.weight`, `menu.right.weight`). "Our Works" is a hardcoded link to `/#pr-section-works`.
-	- `overlays.html`: one hidden overlay per work (`#pr-overlay-<filename>`), built from the works' front matter. Pages that link to works include it.
+	- `head.html`: `<head>` with Google Fonts (Crimson Text, Work Sans), normalize.css from cdnjs (Cloudflare), the legacy CSS and the JS files. The privacy notice names Google Fonts and Cloudflare, so update it if a third-party resource is added or removed.
+	- `nav.html`: the nav bar. The left and right lists come from `.Site.Menus.left` and `.Site.Menus.right`, set in front matter (`menu.left.weight`, `menu.right.weight`). "Our Works" is a hardcoded link to `/#pr-section-works`. The centre compass links home.
+	- `overlays.html`: one hidden overlay per work (`#pr-overlay-<filename>`), built from the works' front matter. The home and About pages include it.
 	- `copyright.html`: the footer, with the copyright line and the Privacy Notice link.
 - `layouts/_default/_markup/render-link.html`: render hook for Markdown links, including the works' `markdownify` descriptions. It opens `http`/`https` links in a new tab, like the hand-written links. `mailto:` and site links keep the default.
-- `data/stores.yaml`: store keys (`Steam`, `Itchio`, `GOG`…) mapped to a display name and an SVG icon in `static/img/stores/`.
+- `data/stores.yaml`: store keys (`Amazon`, `EpicGames`, `GOG`, `Itchio`, `PlayStation`, `Steam`) mapped to a display name and an SVG icon in `static/img/stores/`. The icon is applied as a CSS `mask-image`, so it takes the theme colour.
 - `static/css/legacy/`: the stylesheets actually in use (`general.css`, `praenaris.css`, `praenaris-mobile.css`). `legacy.css` is not linked anywhere. `static/css/*.css` (`main`, `nav`, `body`, `footer`, `_default`) are empty placeholders for the planned CSS rework.
 - `static/js/`: plain scripts with no bundler. `main.js` runs the init on `window.onload`, `overlay_manager.js` shows and hides work overlays, `color_mode_switcher.js` swaps the favicon for dark mode, `whitespace_remover.js` removes whitespace-only text nodes. The `_LEGACY_*.js` files are not used.
-- `static/img/`: backgrounds, icons (`icon-<name>-dark|light`), `covers/` and `pictures/` per work, `stores/`, `socials/`, `masters/`. `_convert.cmd` converts every PNG in the folder to WebP (ImageMagick, quality 35). CSS references the `.webp` versions, and the PNG and PSD sources stay alongside.
+- `static/img/`: backgrounds, icons (`icon-<name>-dark|light`), `covers/` and `pictures/` per work, `stores/`, `socials/` (SVGs, not used yet), `legacy/` (old site, not used). `_convert.cmd` converts every PNG in the folder to WebP (ImageMagick, quality 35). CSS references the `.webp` versions, and the PNG and PSD sources stay alongside. Work covers and pictures are the exception: there is no WebP for them, and the front matter points to the PNG.
 
 
 ## Works (`content/works/*.md`)
+
+There are seven works: `swan`, `protovolkers`, `arima`, `embers`, `chasing`, `unclouded` and `yuhua`. `protovolkers` and `yuhua` are drafts with empty descriptions and no images yet.
 
 Each work is one Markdown file with YAML front matter and no body. The filename (without `.md`) becomes the overlay id, so `swan.md` gives `pr-overlay-swan`. The home grid sorts works by `Date` ascending (creation date).
 
@@ -55,11 +61,11 @@ CoverLink: "/img/covers/<name>.png"
 PictureLink: "/img/pictures/<name>.png"
 InDevelopment: false
 DemoDate: 2022-09-26			# Or null
-ReleaseDate: 2024-12-10			# Or null (with InDevelopment: true it means "TBD", otherwise "cancelled")
+ReleaseDate: 2024-12-10			# Or null. With InDevelopment: true a date reads "To be released on…" and null reads "to be determined". With false, null reads "cancelled"
 MainDeveloper: "Praenaris"
 Developers: [ "Praenaris" ]
 Publishers: [ "Praenaris" ]
-Links:
+Links:							# Commented-out entries are kept, like the Amazon link in chasing.md
   - store: "Steam"				# Must be a key in data/stores.yaml
     link: "https://…"
 ```
@@ -75,7 +81,7 @@ To add a work, create the file, add its cover and picture images, and add any ne
 - Many layout, CSS and JS files end with a braille-art ship banner inside comments. Keep it when editing those files.
 - Asset paths are root-absolute (`/img/…`, `/css/…`, `/js/…`).
 - Commented-out blocks, such as former crew members in `about/list.html` and old works markup in `index.html`, are kept on purpose. Don't delete them unless asked.
-- Site text is in English. `LanguageCode` is `en-us` and `i18n/` is empty.
+- Site text is in English. `LanguageCode` is `en-us`, and there are no translations.
 
 
 ## Known loose ends from the migration
@@ -87,3 +93,6 @@ Mention these if they're relevant to a task, but don't fix them unasked:
 - The home hero links to `./about.html`, which is a leftover URL from the old site. The real URL is `/about/`.
 - `content/works/_index.md` has its menu entry commented out, and `layouts/works/list.html` is empty.
 - `<title>` and the meta description are hardcoded in `head.html` instead of using `.Title` or `.Site.Title`.
+- The nav compass links to `./`, which is the current page rather than the home page, except on the home page itself.
+- `data/stores.yaml` lists `EpicGames` and `GOG`, but `static/img/stores/` has no `epicgames.svg` or `gog.svg`. No work uses them yet.
+- The draft works `protovolkers` and `yuhua` point to cover and picture PNGs that don't exist yet.
