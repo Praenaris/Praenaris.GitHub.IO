@@ -5,6 +5,21 @@ The official website of Praenaris, an indie videogame studio from Donostia / San
 The site is being migrated from an older hand-written HTML/JS site into Hugo, and the migration is about halfway done. Many files named `legacy` or `_LEGACY_` come from the old site. Expect leftovers, hardcoded markup and commented-out blocks.
 
 
+## Git workflow rules (mandatory)
+
+### Cloud sessions (remote containers, e.g. claude.ai/code)
+- Work **only on the `claude` branch** unless explicitly told otherwise.
+- **At the start of every cloud session**, merge the development branch into `claude` to stay up to date:
+  1. `git fetch origin`
+  2. If `origin/development` exists → `git merge origin/development`
+  3. Otherwise → `git merge origin/master`
+- Within the `claude` branch, committing and pushing (`git push -u origin claude`) is allowed.
+- **Never** create, check out, merge into, push to, delete, or otherwise manage any other branch, and never open/manage pull requests, unless explicitly requested.
+
+### Local sessions (the user's own machine)
+- **NEVER touch git** unless explicitly asked: no merge, commit, stage/add, checkout, stash, reset, push, pull, branch changes — nothing. Only edit files on disk; the user handles version control.
+
+
 ## Commands
 
 - `hugo serve` runs the dev server at http://localhost:1313/. Claude's preview (`.claude/launch.json`) uses port 1314 so it doesn't clash with yours. `serve.cmd` does the same and opens the browser. It is git-ignored and local only.
@@ -15,7 +30,11 @@ The site is being migrated from an older hand-written HTML/JS site into Hugo, an
 
 ## Deployment
 
-GitLab (`gitlab.com/praenaris/web-praenaris`) runs `.gitlab-ci.yml`. A push to `master` builds and publishes to GitLab Pages, so every commit on `master` goes live. Other branches only run a test build.
+The main remote `origin` is GitHub (`github.com/Praenaris/Praenaris.GitHub.IO`). `.github/workflows/pages.yml` builds every push with `--gc --minify` and deploys `master` to GitHub Pages. The base URL comes from the Pages settings, and the custom domain `www.praenaris.com` is set there. Other branches, including `claude`, only run a test build.
+
+The `mirror` remote is the old GitLab repository (`gitlab.com/praenaris/web-praenaris`). Its `.gitlab-ci.yml` still publishes `master` to GitLab Pages if that repository gets pushed to. Whichever host the DNS for `www.praenaris.com` points to is the live site.
+
+Images are stored in Git LFS (see `.gitattributes`), so the checkout needs `lfs: true`.
 
 
 ## Structure
