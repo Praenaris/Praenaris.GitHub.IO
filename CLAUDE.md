@@ -93,6 +93,5 @@ Mention these if they're relevant to a task, but don't fix them unasked:
 - The home hero links to `./about.html`, which is a leftover URL from the old site. The real URL is `/about/`.
 - `content/works/_index.md` has its menu entry commented out, and `layouts/works/list.html` is empty.
 - `<title>` and the meta description are hardcoded in `head.html` instead of using `.Title` or `.Site.Title`.
-- The nav compass links to `./`, which is the current page rather than the home page, except on the home page itself.
 - `data/stores.yaml` lists `EpicGames` and `GOG`, but `static/img/stores/` has no `epicgames.svg` or `gog.svg`. No work uses them yet.
 - The draft works `protovolkers` and `yuhua` point to cover and picture PNGs that don't exist yet.
