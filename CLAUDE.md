@@ -53,14 +53,14 @@ No theme is used (`themes/` is empty). The site's own layouts do everything.
 	- `overlays.html`: one hidden overlay per work (`#pr-overlay-<filename>`), built from the works' front matter. Pages that link to works include it.
 	- `copyright.html`: the footer, with the copyright line and the Privacy Notice link.
 - `layouts/_default/_markup/render-link.html`: render hook for Markdown links, including the works' `markdownify` descriptions. It opens `http`/`https` links in a new tab, like the hand-written links. `mailto:` and site links keep the default.
-- `data/socials.yaml`: social network keys (the suffix of `pr-social-item-<key>` / `pr-contact-item-<key>`, whose icons live in the CSS) mapped to a display name and an `external` flag. Only external ones (not `email`) show in the home hero.
+- `data/socials.yaml`: social network keys (the suffix of `pr-social-item-<key>` / `pr-contact-item-<key>`) mapped to a display name, an `icon` and an `external` flag. Only external ones (not `email`) show in the home hero. The icon is a file in `static/img/socials/` (SVG preferred, otherwise a PNG with a transparent background; itch.io and Steam reuse `static/img/stores/`). The CSS uses it as a mask through the `--social-item--icon` variable, so only its shape matters and the CSS sets the colour. Adding a network needs no CSS.
 - `data/studio.yaml`: the studio's own social links (`socials`), shown on the home page and the Contact page.
 - `data/crew.yaml`: the crew on the About page, in order. `active: false` hides former members, who are kept in the file.
 - `layouts/partials/social-links.html`: builds a social list from one of those link lists. Takes a dict with `links`, `style` (`social` icons or `contact` labelled), `class` and `externalOnly`.
 - `data/stores.yaml`: store keys (`Steam`, `Itchio`, `GOG`…) mapped to a display name and an SVG icon in `static/img/stores/`.
 - `static/css/legacy/`: the stylesheets actually in use (`general.css`, `praenaris.css`, `praenaris-mobile.css`). `legacy.css` is not linked anywhere. `static/css/*.css` (`main`, `nav`, `body`, `footer`, `_default`) are empty placeholders for the planned CSS rework.
 - `static/js/`: plain scripts with no bundler. `main.js` runs the init on `window.onload`, `overlay_manager.js` shows and hides work overlays, `color_mode_switcher.js` swaps the favicon for dark mode, `whitespace_remover.js` removes whitespace-only text nodes. The `_LEGACY_*.js` files are not used.
-- `static/img/`: backgrounds, icons (`icon-<name>-dark|light`), `covers/` and `pictures/` per work, `stores/`, `socials/`, `masters/`. `_convert.cmd` converts every PNG in the folder to WebP (ImageMagick, quality 35). CSS references the `.webp` versions, and the PNG and PSD sources stay alongside.
+- `static/img/`: backgrounds, favicons, `covers/` and `pictures/` per work, `stores/`, `socials/`, `masters/`. `_convert.cmd` converts every PNG in the folder to WebP (ImageMagick, quality 35). CSS references the `.webp` versions, and the PNG and PSD sources stay alongside.
 
 
 ## Works (`content/works/*.md`)

@@ -676,9 +676,6 @@ body {
 
 		.pr-contact-list .pr-contact-item {
 			background-color: transparent;
-			background-position: calc((var(--contact-list-item--height) - var(--contact-list-item--image-size)) / 2) center;
-			background-repeat: no-repeat;
-			background-size: var(--contact-list-item--image-size);
 			border-radius: calc(var(--contact-list-item--height) / 2);
 			color: var(--base--text-color--accent);
 			display: block;
@@ -688,10 +685,26 @@ body {
 			height: 100%;
 			letter-spacing: var(--contact-list-item--letter-spacing);
 			padding-left: var(--contact-list-item--left-padding);
+			position: relative;
 			text-align: var(--contact-list-item--text-align);
 			text-transform: uppercase;
 			width: 100%;
 		}
+
+				.pr-contact-list .pr-contact-item::before {
+					background-color: var(--base--text-color--accent);
+					content: "";
+					height: var(--contact-list-item--image-size);
+					left: calc((var(--contact-list-item--height) - var(--contact-list-item--image-size)) / 2);
+					mask-image: var(--social-item--icon);
+					mask-position: center;
+					mask-repeat: no-repeat;
+					mask-size: contain;
+					position: absolute;
+					top: 50%;
+					transform: translateY(-50%);
+					width: var(--contact-list-item--image-size);
+				}
 
 				.pr-contact-list .pr-contact-item:hover {
 					background-color: var(--base--main-color--accent);
@@ -699,69 +712,9 @@ body {
 					font-weight: var(--contact-list-item--font-weight--hover);
 				}
 
-		.pr-contact-item.pr-contact-item-bluesky {
-			background-image: url("/img/icon-bluesky-dark.webp");
-		}
-
-				.pr-contact-item.pr-contact-item-bluesky:hover {
-					background-image: url("/img/icon-bluesky-light.webp");
-				}
-
-		.pr-contact-item.pr-contact-item-discord {
-			background-image: url("/img/icon-discord-dark.webp");
-		}
-
-				.pr-contact-item.pr-contact-item-discord:hover {
-					background-image: url("/img/icon-discord-light.webp");
-				}
-
-		.pr-contact-item.pr-contact-item-email {
-			background-image: url("/img/icon-email-dark.webp");
-		}
-
-				.pr-contact-item.pr-contact-item-email:hover {
-					background-image: url("/img/icon-email-light.webp");
-				}
-
-		.pr-contact-item.pr-contact-item-instagram {
-			background-image: url("/img/icon-instagram-dark.webp");
-		}
-
-				.pr-contact-item.pr-contact-item-instagram:hover {
-					background-image: url("/img/icon-instagram-light.webp");
-				}
-
-		.pr-contact-item.pr-contact-item-mastodon {
-			background-image: url("/img/icon-mastodon-dark.webp");
-		}
-
-				.pr-contact-item.pr-contact-item-mastodon:hover {
-					background-image: url("/img/icon-mastodon-light.webp");
-				}
-
-		.pr-contact-item.pr-contact-item-twitter {
-			background-image: url("/img/icon-twitter-dark.webp");
-		}
-
-				.pr-contact-item.pr-contact-item-twitter:hover {
-					background-image: url("/img/icon-twitter-light.webp");
-				}
-
-		.pr-contact-item.pr-contact-item-twitterx {
-			background-image: url("/img/icon-twitterx-dark.webp");
-		}
-
-				.pr-contact-item.pr-contact-item-twitterx:hover {
-					background-image: url("/img/icon-twitterx-light.webp");
-				}
-
-		.pr-contact-item.pr-contact-item-youtube {
-			background-image: url("/img/icon-youtube-dark.webp");
-		}
-
-				.pr-contact-item.pr-contact-item-youtube:hover {
-					background-image: url("/img/icon-youtube-light.webp");
-				}
+						.pr-contact-list .pr-contact-item:hover::before {
+							background-color: var(--base--main-color);
+						}
 
 
 
@@ -790,17 +743,31 @@ body {
 
 		.pr-social-list .pr-social-item {
 			background-color: transparent;
-			background-position: center;
-			background-repeat: no-repeat;
-			background-size: var(--social-list-item--image-size);
 			border-radius: 100%;
 			display: block;
 			height: 100%;
+			position: relative;
 			width: 100%;
 		}
 
-				.pr-social-list.pr-list-big .pr-social-item {
-					background-size: var(--social-list-item--image-size--big);
+				.pr-social-list .pr-social-item::before {
+					background-color: var(--base--text-color--accent);
+					content: "";
+					height: var(--social-list-item--image-size);
+					left: 50%;
+					mask-image: var(--social-item--icon);
+					mask-position: center;
+					mask-repeat: no-repeat;
+					mask-size: contain;
+					position: absolute;
+					top: 50%;
+					transform: translate(-50%, -50%);
+					width: var(--social-list-item--image-size);
+				}
+
+				.pr-social-list.pr-list-big .pr-social-item::before {
+					height: var(--social-list-item--image-size--big);
+					width: var(--social-list-item--image-size--big);
 				}
 
 				.pr-social-list .pr-social-item:hover {
@@ -811,142 +778,9 @@ body {
 							background-color: var(--base--main-color--accent);
 						}
 
-
-		.pr-social-item.pr-social-item-applemusic {
-			background-image: url("/img/icon-applemusic-dark.webp");
-		}
-
-				.pr-social-item.pr-social-item-applemusic:hover {
-					background-image: url("/img/icon-applemusic-light.webp");
-				}
-
-		.pr-social-item.pr-social-item-artstation {
-			background-image: url("/img/icon-artstation-dark.webp");
-		}
-
-				.pr-social-item.pr-social-item-artstation:hover {
-					background-image: url("/img/icon-artstation-light.webp");
-				}
-
-		.pr-social-item.pr-social-item-bluesky {
-			background-image: url("/img/icon-bluesky-dark.webp");
-		}
-
-				.pr-social-item.pr-social-item-bluesky:hover {
-					background-image: url("/img/icon-bluesky-light.webp");
-				}
-
-		.pr-social-item.pr-social-item-discord {
-			background-image: url("/img/icon-discord-dark.webp");
-		}
-
-				.pr-social-item.pr-social-item-discord:hover {
-					background-image: url("/img/icon-discord-light.webp");
-				}
-
-		.pr-social-item.pr-social-item-email {
-			background-image: url("/img/icon-email-dark.webp");
-		}
-
-				.pr-social-item.pr-social-item-email:hover {
-					background-image: url("/img/icon-email-light.webp");
-				}
-
-		.pr-social-item.pr-social-item-github {
-			background-image: url("/img/icon-github-dark.webp");
-		}
-
-				.pr-social-item.pr-social-item-github:hover {
-					background-image: url("/img/icon-github-light.webp");
-				}
-
-		.pr-social-item.pr-social-item-gitlab {
-			background-image: url("/img/icon-gitlab-dark.webp");
-		}
-
-				.pr-social-item.pr-social-item-gitlab:hover {
-					background-image: url("/img/icon-gitlab-light.webp");
-				}
-
-		.pr-social-item.pr-social-item-instagram {
-			background-image: url("/img/icon-instagram-dark.webp");
-		}
-
-				.pr-social-item.pr-social-item-instagram:hover {
-					background-image: url("/img/icon-instagram-light.webp");
-				}
-
-		.pr-social-item.pr-social-item-itchio {
-			background-image: url("/img/icon-itchio-dark.webp");
-		}
-
-				.pr-social-item.pr-social-item-itchio:hover {
-					background-image: url("/img/icon-itchio-light.webp");
-				}
-
-		.pr-social-item.pr-social-item-linkedin {
-			background-image: url("/img/icon-linkedin-dark.webp");
-		}
-
-				.pr-social-item.pr-social-item-linkedin:hover {
-					background-image: url("/img/icon-linkedin-light.webp");
-				}
-
-		.pr-social-item.pr-social-item-mastodon {
-			background-image: url("/img/icon-mastodon-dark.webp");
-		}
-
-				.pr-social-item.pr-social-item-mastodon:hover {
-					background-image: url("/img/icon-mastodon-light.webp");
-				}
-
-		.pr-social-item.pr-social-item-twitter {
-			background-image: url("/img/icon-twitter-dark.webp");
-		}
-
-				.pr-social-item.pr-social-item-twitter:hover {
-					background-image: url("/img/icon-twitter-light.webp");
-				}
-
-		.pr-social-item.pr-social-item-twitterx {
-			background-image: url("/img/icon-twitterx-dark.webp");
-		}
-
-				.pr-social-item.pr-social-item-twitterx:hover {
-					background-image: url("/img/icon-twitterx-light.webp");
-				}
-
-		.pr-social-item.pr-social-item-spotify {
-			background-image: url("/img/icon-spotify-dark.webp");
-		}
-
-				.pr-social-item.pr-social-item-spotify:hover {
-					background-image: url("/img/icon-spotify-light.webp");
-				}
-
-		.pr-social-item.pr-social-item-steam {
-			background-image: url("/img/icon-steam-dark.webp");
-		}
-
-				.pr-social-item.pr-social-item-steam:hover {
-					background-image: url("/img/icon-steam-light.webp");
-				}
-
-		.pr-social-item.pr-social-item-website {
-			background-image: url("/img/icon-website-dark.webp");
-		}
-
-				.pr-social-item.pr-social-item-website:hover {
-					background-image: url("/img/icon-website-light.webp");
-				}
-
-		.pr-social-item.pr-social-item-youtube {
-			background-image: url("/img/icon-youtube-dark.webp");
-		}
-
-				.pr-social-item.pr-social-item-youtube:hover {
-					background-image: url("/img/icon-youtube-light.webp");
-				}
+						.pr-social-list .pr-social-item:hover::before {
+							background-color: var(--base--main-color);
+						}
 
 
 

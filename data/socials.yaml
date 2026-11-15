@@ -1,72 +1,91 @@
 # Social networks and contact channels, keyed by the suffix of their CSS classes
-# (pr-social-item-<key>, pr-contact-item-<key>). Each key needs an icon in the CSS.
+# (pr-social-item-<key>, pr-contact-item-<key>).
+# icon: the network's logo, used as a CSS mask, so only its shape matters and the colour comes from the CSS.
+#       Prefer an SVG, otherwise a PNG with a transparent background. They live in /img/socials/.
 # external: true for links to outside websites, false for anything else (email).
 # Only external ones are shown in the home page's hero.
 
 applemusic:
   name: "Apple Music"
+  icon: "/img/socials/applemusic.png"
   external: true
 
 artstation:
   name: "ArtStation"
+  icon: "/img/socials/artstation.png"
   external: true
 
 bluesky:
   name: "Bluesky"
+  icon: "/img/socials/bluesky.svg"
   external: true
 
 discord:
   name: "Discord"
+  icon: "/img/socials/discord.svg"
   external: true
 
 email:
   name: "Email"
+  icon: "/img/socials/email.png"
   external: false
 
 github:
   name: "GitHub"
+  icon: "/img/socials/github.svg"
   external: true
 
 gitlab:
   name: "GitLab"
+  icon: "/img/socials/gitlab.svg"
   external: true
 
 instagram:
   name: "Instagram"
+  icon: "/img/socials/instagram.png"
   external: true
 
 itchio:
   name: "itch.io"
+  icon: "/img/stores/itchio.svg"
   external: true
 
 linkedin:
   name: "LinkedIn"
+  icon: "/img/socials/linkedin.svg"
   external: true
 
 mastodon:
   name: "Mastodon"
+  icon: "/img/socials/mastodon.svg"
   external: true
 
 spotify:
   name: "Spotify"
+  icon: "/img/socials/spotify.png"
   external: true
 
 steam:
   name: "Steam"
+  icon: "/img/stores/steam.svg"
   external: true
 
 twitter:
   name: "Twitter"
+  icon: "/img/socials/twitter.png"
   external: true
 
 twitterx:
   name: "Twitter / X"
+  icon: "/img/socials/x.svg"
   external: true
 
 website:
   name: "Website"
+  icon: "/img/socials/website.png"
   external: true
 
 youtube:
   name: "YouTube"
+  icon: "/img/socials/youtube.png"
   external: true

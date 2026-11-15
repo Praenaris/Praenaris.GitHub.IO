@@ -12,11 +12,12 @@
 	{{ range .links }}
 	{{ $network := index site.Data.socials .network }}
 	{{ if not $network }}{{ errorf "Unknown social network %q, add it to data/socials.yaml" .network }}{{ end }}
+	{{ if not $network.icon }}{{ errorf "Social network %q has no icon in data/socials.yaml" .network }}{{ end }}
 	{{ if or $network.external (not $externalOnly) }}
 	{{ if eq $style "contact" }}
-	<li><a class="pr-contact-item pr-contact-item-{{ .network }}"{{ if $network.external }} target="_blank"{{ end }} href="{{ .link }}">{{ .label | default $network.name }}</a></li>
+	<li><a class="pr-contact-item pr-contact-item-{{ .network }}"{{ if $network.external }} target="_blank"{{ end }} href="{{ .link }}" style="--social-item--icon: url('{{ $network.icon }}');">{{ .label | default $network.name }}</a></li>
 	{{ else }}
-	<li><a class="pr-social-item pr-social-item-{{ .network }}"{{ if $network.external }} target="_blank"{{ end }} href="{{ .link }}" aria-label="{{ $network.name }}"></a></li>
+	<li><a class="pr-social-item pr-social-item-{{ .network }}"{{ if $network.external }} target="_blank"{{ end }} href="{{ .link }}" style="--social-item--icon: url('{{ $network.icon }}');" aria-label="{{ $network.name }}"></a></li>
 	{{ end }}
 	{{ end }}
 	{{ end }}
