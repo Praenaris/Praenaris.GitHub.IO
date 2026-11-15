@@ -27,6 +27,4 @@ Links:
 
   - store: "Steam"
     link: "https://store.steampowered.com/app/4414700/Unclouded/"
-  - store: "Itchio"
-    link: "https://praenaris.itch.io/windmill"
 ---
