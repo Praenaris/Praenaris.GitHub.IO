@@ -49,8 +49,6 @@
       link: "https://github.com/davidtabernerom"
     - network: "gitlab"
       link: "https://gitlab.com/davidtabernerom"
-    - network: "itchio"
-      link: "https://davidtabernerom.itch.io/"
     - network: "twitterx"
       link: "https://twitter.com/davidtabernerom"
     - network: "mastodon"

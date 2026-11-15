@@ -36,7 +36,7 @@
 					<div class="pr-staff-compass-part"></div>
 				</div>
 				<div class="pr-staff-item-description">
-					<span>{{ .name }}</span><span>{{ .nickname }}</span>
+					<span>{{ .name }}</span><span>{{ with .nickname }}“{{ . }}”{{ end }}</span>
 					<ul class="pr-tag-list">
 						{{ range .tags }}<li class="pr-tag-item">{{ . }}</li>{{ end }}
 					</ul>
