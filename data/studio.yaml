@@ -1,0 +1,20 @@
+# The studio's own social links, in display order.
+# network: a key in data/socials.yaml.
+# label: optional text for the Contact page; the network's name is used otherwise.
+
+socials:
+  - network: "email"
+    link: "mailto:contact@praenaris.com"
+    label: "contact@praenaris.com"
+  - network: "discord"
+    link: "https://discord.praenaris.com/"
+  - network: "twitterx"
+    link: "https://x.praenaris.com/"
+  - network: "bluesky"
+    link: "https://bluesky.praenaris.com/"
+  - network: "mastodon"
+    link: "https://mastodon.praenaris.com/"
+  - network: "instagram"
+    link: "https://instagram.praenaris.com/"
+  - network: "youtube"
+    link: "https://youtube.praenaris.com/"

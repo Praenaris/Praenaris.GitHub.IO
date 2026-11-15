@@ -14,13 +14,13 @@
 
 		<h3>Into deep waters</h3>
 		<p class="pr-header">Our history</p>
-		<p><a href='/about'>Praenaris</a> began as a group of students in late 2020 got together to create their first videogame, originally entitled Project Circenses. This project would grow into <a onclick="showOverlayContainerById('pr-overlay-swan', true, event)">The Silent Swan</a>, the company’s first large videogame, released to critical acclaim in November 2023.</p>
-		<p>On the way there, <a onclick="showOverlayContainerById('pr-overlay-arima', true, event)">Arima Lodge</a> was born, a free-to-play game for PC, released on itchio in September 2022, and reworked and released on Steam in late 2024.</p>
+		<p><a href='/about'>Praenaris</a> began in late 2020, when a group of students got together to create their first videogame, originally entitled Project Circenses. This project would grow into <a onclick="showOverlayContainerById('pr-overlay-swan', true, event)">The Silent Swan</a>, the company’s first large videogame, released to critical acclaim in November 2023.</p>
+		<p>On the way there, <a onclick="showOverlayContainerById('pr-overlay-arima', true, event)">Arima Lodge</a> was born, a free-to-play game for PC, released on itch.io in September 2022, and reworked and released on Steam in late 2024.</p>
 		<p>Right around the same time in late 2022, Project Umbra began development. The project, whose official title is <a onclick="showOverlayContainerById('pr-overlay-embers', true, event)">Embers of the Evening</a>, was a first-person psychological horror videogame cancelled in mid-2024.</p>
-		<p>Currently, the team is working in the Nemo series of projects. The first of those projects, an illustrated short story entitled <a onclick="showOverlayContainerById('pr-overlay-chasing', true, event)">Chasing the Sun</a>, released for free in late 2025.</p>
+		<p>Currently, the team is working on the Nemo series of projects. The first of those projects, an illustrated short story entitled <a onclick="showOverlayContainerById('pr-overlay-chasing', true, event)">Chasing the Sun</a>, released for free in late 2025.</p>
 
 		<p class="pr-header">Our ship, the Praenaris</p>
-		<p>The name of our company and ship, the Praenaris, comes from the words “praenatare”, to sail or swim in Latin, and “Polaris”, the northern star. We imagine our everyday work and effort to be similar that of an icebreaker sailing across the arctic oceans in search of the northern star. The star, in turn, represents our desire and willingness to be a part of the modern technological era creating lasting works in both videogames and software.</p>
+		<p>The name of our company and ship, the Praenaris, comes from the words “praenatare”, to sail or swim in Latin, and “Polaris”, the northern star. We imagine our everyday work and effort to be similar to that of an icebreaker sailing across the arctic oceans in search of the northern star. The star, in turn, represents our desire and willingness to be a part of the modern technological era creating lasting works in both videogames and software.</p>
 		<p>Thus, the Praenaris, both in name and concept, embodies our commitment to face the odds, sail across the storms, and open up a path there where there is seemingly none.</p>
 
 	</section>
@@ -30,207 +30,21 @@
 		<h1>The Crew</h1>
 		<h3>Part of the ship, part of the crew.</h3>
 		<ul class="pr-staff-list">
-			<li class="pr-staff-item pr-staff-item-ekain">
+			{{ range where site.Data.crew "active" true }}
+			<li class="pr-staff-item pr-staff-item-{{ .id }}">
 				<div class="pr-staff-item-portrait">
 					<div class="pr-staff-compass-part"></div>
 				</div>
 				<div class="pr-staff-item-description">
-					<span>Highnoon Ekain</span><span></span>
+					<span>{{ .name }}</span><span>{{ .nickname }}</span>
 					<ul class="pr-tag-list">
-						<li class="pr-tag-item">Captain</li>
-						<li class="pr-tag-item">Game and Software Director</li>
+						{{ range .tags }}<li class="pr-tag-item">{{ . }}</li>{{ end }}
 					</ul>
-					<q class="smaller">Although I’m a writer at heart, I’ve found myself in charge of Praenaris and at the head of the projects we create. My goal is to balance the pragmatism of survivors with the ambitions of dreamers as I captain the Praenaris across the stormy seas of the videogame and software industry.</q>
-					<ul class="pr-social-list">
-						<li><a class="pr-social-item pr-social-item-linkedin" target="_blank" href="https://www.linkedin.com/in/highnoon-ekain-545633227/"></a></li>
-						<li><a class="pr-social-item pr-social-item-artstation" target="_blank" href="https://www.artstation.com/highnoonekain"></a></li>
-					</ul>
+					<q class="{{ if .smallQuote }}smaller{{ end }}">{{ .quote }}</q>
+					{{ partial "social-links.html" (dict "links" .socials) }}
 				</div>
 			</li>
-			<li class="pr-staff-item pr-staff-item-andoni">
-				<div class="pr-staff-item-portrait">
-					<div class="pr-staff-compass-part"></div>
-				</div>
-				<div class="pr-staff-item-description">
-					<span>Andoni Eizaguirre Simón</span><span></span>
-					<ul class="pr-tag-list">
-						<li class="pr-tag-item">Lead Concept Artist</li>
-					</ul>
-					<q class="smaller">I’m Andoni, a Spanish artist specialized in environmental art. I have been working as the principal concept artist of Praenaris for over three years, bringing to life all sorts of characters, environments, and props, as well as leading our games into a unified artistic vision. I’m very passionate about huge natural landscapes, and spend most of my free time to create my own.</q>
-					<ul class="pr-social-list">
-						<li><a class="pr-social-item pr-social-item-artstation" target="_blank" href="https://www.artstation.com/andooniii"></a></li>
-						<li><a class="pr-social-item pr-social-item-instagram" target="_blank" href="https://www.instagram.com/andooniii/"></a></li>
-						<li><a class="pr-social-item pr-social-item-twitterx" target="_blank" href="https://twitter.com/_Andoni12"></a></li>
-						<li><a class="pr-social-item pr-social-item-linkedin" target="_blank" href="https://www.linkedin.com/in/andoni-eizaguirre-sim%C3%B3n-649021235/"></a></li>
-					</ul>
-				</div>
-			</li>
-			<li class="pr-staff-item pr-staff-item-tabernero">
-				<div class="pr-staff-item-portrait">
-					<div class="pr-staff-compass-part"></div>
-				</div>
-				<div class="pr-staff-item-description">
-					<span>David Tabernero Mateo</span><span>Tabernero</span>
-					<ul class="pr-tag-list">
-						<li class="pr-tag-item">Lead Programmer</li>
-						<li class="pr-tag-item">Technical Designer</li>
-						<li class="pr-tag-item">System Administrator</li>
-					</ul>
-					<q class="smaller">Hi! I’m Tabernero, programming lover, videogame aficionado and dragon worshipper. You’ll probably find me working but I’m willing to be dragged into anything that includes either gaming or talking about it.</q>
-					<ul class="pr-social-list">
-						<li><a class="pr-social-item pr-social-item-website" target="_blank" href="https://tabernero.dev/"></a></li>
-						<li><a class="pr-social-item pr-social-item-github" target="_blank" href="https://github.com/davidtabernerom"></a></li>
-						<li><a class="pr-social-item pr-social-item-gitlab" target="_blank" href="https://gitlab.com/davidtabernerom"></a></li>
-						<li><a class="pr-social-item pr-social-item-itchio" target="_blank" href="https://davidtabernerom.itch.io/"></a></li>
-						<li><a class="pr-social-item pr-social-item-twitterx" target="_blank" href="https://twitter.com/davidtabernerom"></a></li>
-						<li><a class="pr-social-item pr-social-item-mastodon" target="_blank" href="https://mastodon.online/@davidtabernerom"></a></li>
-						<li><a class="pr-social-item pr-social-item-linkedin" target="_blank" href="https://www.linkedin.com/in/davidtabernerom/"></a></li>
-					</ul>
-				</div>
-			</li>
-			<!--<li class="pr-staff-item pr-staff-item-miguel">
-				<div class="pr-staff-item-portrait">
-					<div class="pr-staff-compass-part"></div>
-				</div>
-				<div class="pr-staff-item-description">
-					<span>Miguel Pastor García</span><span></span>
-					<ul class="pr-tag-list">
-						<li class="pr-tag-item">3D Artist</li>
-						<li class="pr-tag-item">Environmental Artist</li>
-					</ul>
-					<q class="">Good, good, good.</q>
-					<ul class="pr-social-list">
-						<li><a class="pr-social-item pr-social-item-artstation" target="_blank" href="https://www.artstation.com/mpg_96"></a></li>
-						<li><a class="pr-social-item pr-social-item-linkedin" target="_blank" href="https://www.linkedin.com/in/miguelpastorgarcia3d/"></a></li>
-					</ul>
-				</div>
-			</li>
-			<li class="pr-staff-item pr-staff-item-francisco">
-				<div class="pr-staff-item-portrait">
-					<div class="pr-staff-compass-part"></div>
-				</div>
-				<div class="pr-staff-item-description">
-					<span>Francisco Ruiz Arroyo</span><span>Arroyo</span>
-					<ul class="pr-tag-list">
-						<li class="pr-tag-item">Music Composer</li>
-						<li class="pr-tag-item">Audio Designer</li>
-					</ul>
-					<q class="">*piano music stops*</q>
-					<ul class="pr-social-list">
-						<li><a class="pr-social-item pr-social-item-spotify" target="_blank" href="https://open.spotify.com/artist/1g3Pigk1om1ggX4NHyctEn"></a></li>
-						<li><a class="pr-social-item pr-social-item-applemusic" target="_blank" href="https://music.apple.com/artist/francisco-arroyo/1714027791"></a></li>
-						<li><a class="pr-social-item pr-social-item-youtube" target="_blank" href="https://www.youtube.com/@arroyomusic1659"></a></li>
-						<li><a class="pr-social-item pr-social-item-instagram" target="_blank" href="https://www.instagram.com/arroyo_ost/"></a></li>
-					</ul>
-				</div>
-			</li>
-			<li class="pr-staff-item pr-staff-item-hector">
-				<div class="pr-staff-item-portrait">
-					<div class="pr-staff-compass-part"></div>
-				</div>
-				<div class="pr-staff-item-description">
-					<span>Héctor García Cabrera</span><span>Dr. Canario</span>
-					<ul class="pr-tag-list">
-						<li class="pr-tag-item">Programmer</li>
-					</ul>
-					<q class="smaller">During my thesis, I analyzed data for SDHCal and developed SiWECal hardware with CALICE. With a Ph.D. in experimental high-energy physics, I've enhanced calorimeters for e+e- accelerators. Proficient in C++, I've contributed to collaboration software. Now, I'm eager to apply my programming skills to the video game industry</q>
-					<ul class="pr-social-list">
-						<li><a class="pr-social-item pr-social-item-github" target="_blank" href="https://github.com/Eldrimor"></a></li>
-						<li><a class="pr-social-item pr-social-item-gitlab" target="_blank" href="https://gitlab.com/hec.garciacab"></a></li>
-						<li><a class="pr-social-item pr-social-item-linkedin" target="_blank" href="https://www.linkedin.com/in/hector-garcia-cabrera-ba30b9238/"></a></li>
-					</ul>
-				</div>
-			</li>
-			<li class="pr-staff-item pr-staff-item-nidai">
-				<div class="pr-staff-item-portrait">
-					<div class="pr-staff-compass-part"></div>
-				</div>
-				<div class="pr-staff-item-description">
-					<span>Javier Jiménez Enciso</span><span>Nidai</span>
-					<ul class="pr-tag-list">
-						<li class="pr-tag-item">3D Artist</li>
-						<li class="pr-tag-item">Environmental Artist</li>
-					</ul>
-					<q class="smaller">My name is Javi, a 3D and Technical Artist from Madrid, Spain. Over the course of my career, I have had the opportunity to work with various great teams. My passion and dedication to my craft is evident in the heart and soul I put into each and every project.</q>
-					<ul class="pr-social-list">
-						<li><a class="pr-social-item pr-social-item-instagram" target="_blank" href="https://www.instagram.com/h_nidai/"></a></li>
-						<li><a class="pr-social-item pr-social-item-linkedin" target="_blank" href="https://www.linkedin.com/in/javije/"></a></li>
-					</ul>
-				</div>
-			</li>
-			<li class="pr-staff-item pr-staff-item-raul">
-				<div class="pr-staff-item-portrait">
-					<div class="pr-staff-compass-part"></div>
-				</div>
-				<div class="pr-staff-item-description">
-					<span>Raúl Blasco Río</span><span></span>
-					<ul class="pr-tag-list">
-						<li class="pr-tag-item">Concept Artist</li>
-					</ul>
-					<q class="smaller">Nuclear reactor. From Wikipedia, the free encyclopedia. A nuclear reactor is a device used to initiate and control a fission nuclear chain reaction or nuclear fusion reactions. Heat from nuclear fission is passed to a working fluid (water or gas), which in turn runs through steam turbines.</q>
-					<ul class="pr-social-list">
-						<li><a class="pr-social-item pr-social-item-artstation" target="_blank" href="https://www.artstation.com/raulblascorio"></a></li>
-						<li><a class="pr-social-item pr-social-item-instagram" target="_blank" href="https://www.instagram.com/rbrart_/"></a></li>
-						<li><a class="pr-social-item pr-social-item-twitterx" target="_blank" href="https://twitter.com/rbrart_"></a></li>
-						<li><a class="pr-social-item pr-social-item-linkedin" target="_blank" href="https://www.linkedin.com/in/raul-blasco-315762264/"></a></li>
-					</ul>
-				</div>
-			</li>
-			<li class="pr-staff-item pr-staff-item-solanis">
-				<div class="pr-staff-item-portrait">
-					<div class="pr-staff-compass-part"></div>
-				</div>
-				<div class="pr-staff-item-description">
-					<span>María Solana Rodríguez</span><span>Solanis</span>
-					<ul class="pr-tag-list">
-						<li class="pr-tag-item">Marketing Manager</li>
-						<li class="pr-tag-item">Concept Artist</li>
-					</ul>
-					<q class="smaller">Hi! With over three years of experience in marketing, I entered the industry before completing my studies, mastering various roles with a knack for artistry. Now, I juggle freelance gigs while infusing marketing savvy into our game studio, Praenaris.</q>
-					<ul class="pr-social-list">
-						<li><a class="pr-social-item pr-social-item-artstation" target="_blank" href="https://www.artstation.com/mariasolana"></a></li>
-						<li><a class="pr-social-item pr-social-item-instagram" target="_blank" href="https://www.instagram.com/mariasolanaaa/"></a></li>
-						<li><a class="pr-social-item pr-social-item-linkedin" target="_blank" href="https://www.linkedin.com/in/mariasolana/"></a></li>
-					</ul>
-				</div>
-			</li>
-			<li class="pr-staff-item pr-staff-item-carlos">
-				<div class="pr-staff-item-portrait">
-					<div class="pr-staff-compass-part"></div>
-				</div>
-				<div class="pr-staff-item-description">
-					<span>Carlos Jiménez Jiménez</span><span></span>
-					<ul class="pr-tag-list">
-						<li class="pr-tag-item">Programmer</li>
-					</ul>
-					<q class="">[Lying] I don’t use monkey.</q>
-					<ul class="pr-social-list">
-						<li><a class="pr-social-item pr-social-item-website" target="_blank" href="https://carlosjimenez.eu/"></a></li>
-						<li><a class="pr-social-item pr-social-item-github" target="_blank" href="https://github.com/iCarlosDev"></a></li>
-						<li><a class="pr-social-item pr-social-item-gitlab" target="_blank" href="https://gitlab.com/iCarlosDev"></a></li>
-						<li><a class="pr-social-item pr-social-item-twitterx" target="_blank" href="https://twitter.com/carlos2003cjj"></a></li>
-						<li><a class="pr-social-item pr-social-item-instagram" target="_blank" href="https://www.instagram.com/caarlos.jmz/"></a></li>
-						<li><a class="pr-social-item pr-social-item-linkedin" target="_blank" href="https://www.linkedin.com/in/carlosjmzjmz/"></a></li>
-					</ul>
-				</div>
-			</li>
-			<li class="pr-staff-item pr-staff-item-xabi">
-				<div class="pr-staff-item-portrait">
-					<div class="pr-staff-compass-part"></div>
-				</div>
-				<div class="pr-staff-item-description">
-					<span>Xabier Álvarez Sanvicens</span><span>Xabi</span>
-					<ul class="pr-tag-list">
-						<li class="pr-tag-item">Rigger</li>
-						<li class="pr-tag-item">Animator</li>
-					</ul>
-					<q class="smaller">Teacher in the morning, rigger and animator in the afternoon (but without pom-poms). One of my biggest passions is teaching and my own learning. My dreams, my goals, my perseverance build my reality. So, let's keep sailing!</q>
-					<ul class="pr-social-list">
-						<li><a class="pr-social-item pr-social-item-twitterx" target="_blank" href="https://twitter.com/xabier_alvarez_"></a></li>
-						<li><a class="pr-social-item pr-social-item-linkedin" target="_blank" href="https://www.linkedin.com/in/xabier-alvarez/"></a></li>
-					</ul>
-				</div>
-			</li>-->
+			{{ end }}
 		</ul>
 	</section>
 

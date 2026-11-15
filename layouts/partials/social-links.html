@@ -1,0 +1,23 @@
+{{/*
+	A list of social links built from data/socials.yaml.
+	Parameters (dict):
+		links			List of { network, link, label }, e.g. site.Data.studio.socials
+		style			"social" (icons, default) or "contact" (icon and label)
+		class			Extra classes for the <ul>, optional
+		externalOnly	true to skip networks that aren't external websites, such as email
+*/}}
+{{ $style := .style | default "social" }}
+{{ $externalOnly := .externalOnly | default false }}
+<ul class="pr-{{ $style }}-list{{ with .class }} {{ . }}{{ end }}">
+	{{ range .links }}
+	{{ $network := index site.Data.socials .network }}
+	{{ if not $network }}{{ errorf "Unknown social network %q, add it to data/socials.yaml" .network }}{{ end }}
+	{{ if or $network.external (not $externalOnly) }}
+	{{ if eq $style "contact" }}
+	<li><a class="pr-contact-item pr-contact-item-{{ .network }}"{{ if $network.external }} target="_blank"{{ end }} href="{{ .link }}">{{ .label | default $network.name }}</a></li>
+	{{ else }}
+	<li><a class="pr-social-item pr-social-item-{{ .network }}"{{ if $network.external }} target="_blank"{{ end }} href="{{ .link }}" aria-label="{{ $network.name }}"></a></li>
+	{{ end }}
+	{{ end }}
+	{{ end }}
+</ul>

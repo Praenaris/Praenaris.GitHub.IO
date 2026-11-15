@@ -1,0 +1,183 @@
+# Crew members shown on the About page, in display order.
+# id: suffix of pr-staff-item-<id>; the portrait comes from that class in the CSS.
+# active: true while they are part of the studio. Former members stay here with false and are hidden.
+# nickname: shown under the name, or "".
+# smallQuote: true for long quotes, which use a smaller font.
+# socials: network is a key in data/socials.yaml.
+
+- id: "ekain"
+  active: true
+  name: "Highnoon Ekain"
+  nickname: ""
+  tags: [ "Captain", "Game and Software Director" ]
+  smallQuote: true
+  quote: "Although I’m a writer at heart, I’ve found myself in charge of Praenaris and at the head of the projects we create. My goal is to balance the pragmatism of survivors with the ambitions of dreamers as I captain the Praenaris across the stormy seas of the videogame and software industry."
+  socials:
+    - network: "linkedin"
+      link: "https://www.linkedin.com/in/highnoon-ekain-545633227/"
+    - network: "artstation"
+      link: "https://www.artstation.com/highnoonekain"
+
+- id: "andoni"
+  active: true
+  name: "Andoni Eizaguirre Simón"
+  nickname: ""
+  tags: [ "Lead Concept Artist" ]
+  smallQuote: true
+  quote: "I’m Andoni, a Spanish artist specialized in environmental art. I have been working as the principal concept artist of Praenaris for over three years, bringing to life all sorts of characters, environments, and props, as well as leading our games into a unified artistic vision. I’m very passionate about huge natural landscapes, and spend most of my free time to create my own."
+  socials:
+    - network: "artstation"
+      link: "https://www.artstation.com/andooniii"
+    - network: "instagram"
+      link: "https://www.instagram.com/andooniii/"
+    - network: "twitterx"
+      link: "https://twitter.com/_Andoni12"
+    - network: "linkedin"
+      link: "https://www.linkedin.com/in/andoni-eizaguirre-sim%C3%B3n-649021235/"
+
+- id: "tabernero"
+  active: true
+  name: "David Tabernero Mateo"
+  nickname: "Tabernero"
+  tags: [ "Lead Programmer", "Technical Designer", "System Administrator" ]
+  smallQuote: true
+  quote: "Hi! I’m Tabernero, programming lover, videogame aficionado and dragon worshipper. You’ll probably find me working but I’m willing to be dragged into anything that includes either gaming or talking about it."
+  socials:
+    - network: "website"
+      link: "https://tabernero.dev/"
+    - network: "github"
+      link: "https://github.com/davidtabernerom"
+    - network: "gitlab"
+      link: "https://gitlab.com/davidtabernerom"
+    - network: "itchio"
+      link: "https://davidtabernerom.itch.io/"
+    - network: "twitterx"
+      link: "https://twitter.com/davidtabernerom"
+    - network: "mastodon"
+      link: "https://mastodon.online/@davidtabernerom"
+    - network: "linkedin"
+      link: "https://www.linkedin.com/in/davidtabernerom/"
+
+- id: "miguel"
+  active: false
+  name: "Miguel Pastor García"
+  nickname: ""
+  tags: [ "3D Artist", "Environmental Artist" ]
+  smallQuote: false
+  quote: "Good, good, good."
+  socials:
+    - network: "artstation"
+      link: "https://www.artstation.com/mpg_96"
+    - network: "linkedin"
+      link: "https://www.linkedin.com/in/miguelpastorgarcia3d/"
+
+- id: "francisco"
+  active: false
+  name: "Francisco Ruiz Arroyo"
+  nickname: "Arroyo"
+  tags: [ "Music Composer", "Audio Designer" ]
+  smallQuote: false
+  quote: "*piano music stops*"
+  socials:
+    - network: "spotify"
+      link: "https://open.spotify.com/artist/1g3Pigk1om1ggX4NHyctEn"
+    - network: "applemusic"
+      link: "https://music.apple.com/artist/francisco-arroyo/1714027791"
+    - network: "youtube"
+      link: "https://www.youtube.com/@arroyomusic1659"
+    - network: "instagram"
+      link: "https://www.instagram.com/arroyo_ost/"
+
+- id: "hector"
+  active: false
+  name: "Héctor García Cabrera"
+  nickname: "Dr. Canario"
+  tags: [ "Programmer" ]
+  smallQuote: true
+  quote: "During my thesis, I analyzed data for SDHCal and developed SiWECal hardware with CALICE. With a Ph.D. in experimental high-energy physics, I've enhanced calorimeters for e+e- accelerators. Proficient in C++, I've contributed to collaboration software. Now, I'm eager to apply my programming skills to the video game industry"
+  socials:
+    - network: "github"
+      link: "https://github.com/Eldrimor"
+    - network: "gitlab"
+      link: "https://gitlab.com/hec.garciacab"
+    - network: "linkedin"
+      link: "https://www.linkedin.com/in/hector-garcia-cabrera-ba30b9238/"
+
+- id: "nidai"
+  active: false
+  name: "Javier Jiménez Enciso"
+  nickname: "Nidai"
+  tags: [ "3D Artist", "Environmental Artist" ]
+  smallQuote: true
+  quote: "My name is Javi, a 3D and Technical Artist from Madrid, Spain. Over the course of my career, I have had the opportunity to work with various great teams. My passion and dedication to my craft is evident in the heart and soul I put into each and every project."
+  socials:
+    - network: "instagram"
+      link: "https://www.instagram.com/h_nidai/"
+    - network: "linkedin"
+      link: "https://www.linkedin.com/in/javije/"
+
+- id: "raul"
+  active: false
+  name: "Raúl Blasco Río"
+  nickname: ""
+  tags: [ "Concept Artist" ]
+  smallQuote: true
+  quote: "Nuclear reactor. From Wikipedia, the free encyclopedia. A nuclear reactor is a device used to initiate and control a fission nuclear chain reaction or nuclear fusion reactions. Heat from nuclear fission is passed to a working fluid (water or gas), which in turn runs through steam turbines."
+  socials:
+    - network: "artstation"
+      link: "https://www.artstation.com/raulblascorio"
+    - network: "instagram"
+      link: "https://www.instagram.com/rbrart_/"
+    - network: "twitterx"
+      link: "https://twitter.com/rbrart_"
+    - network: "linkedin"
+      link: "https://www.linkedin.com/in/raul-blasco-315762264/"
+
+- id: "solanis"
+  active: false
+  name: "María Solana Rodríguez"
+  nickname: "Solanis"
+  tags: [ "Marketing Manager", "Concept Artist" ]
+  smallQuote: true
+  quote: "Hi! With over three years of experience in marketing, I entered the industry before completing my studies, mastering various roles with a knack for artistry. Now, I juggle freelance gigs while infusing marketing savvy into our game studio, Praenaris."
+  socials:
+    - network: "artstation"
+      link: "https://www.artstation.com/mariasolana"
+    - network: "instagram"
+      link: "https://www.instagram.com/mariasolanaaa/"
+    - network: "linkedin"
+      link: "https://www.linkedin.com/in/mariasolana/"
+
+- id: "carlos"
+  active: false
+  name: "Carlos Jiménez Jiménez"
+  nickname: ""
+  tags: [ "Programmer" ]
+  smallQuote: false
+  quote: "[Lying] I don’t use monkey."
+  socials:
+    - network: "website"
+      link: "https://carlosjimenez.eu/"
+    - network: "github"
+      link: "https://github.com/iCarlosDev"
+    - network: "gitlab"
+      link: "https://gitlab.com/iCarlosDev"
+    - network: "twitterx"
+      link: "https://twitter.com/carlos2003cjj"
+    - network: "instagram"
+      link: "https://www.instagram.com/caarlos.jmz/"
+    - network: "linkedin"
+      link: "https://www.linkedin.com/in/carlosjmzjmz/"
+
+- id: "xabi"
+  active: false
+  name: "Xabier Álvarez Sanvicens"
+  nickname: "Xabi"
+  tags: [ "Rigger", "Animator" ]
+  smallQuote: true
+  quote: "Teacher in the morning, rigger and animator in the afternoon (but without pom-poms). One of my biggest passions is teaching and my own learning. My dreams, my goals, my perseverance build my reality. So, let's keep sailing!"
+  socials:
+    - network: "twitterx"
+      link: "https://twitter.com/xabier_alvarez_"
+    - network: "linkedin"
+      link: "https://www.linkedin.com/in/xabier-alvarez/"

@@ -1,0 +1,72 @@
+# Social networks and contact channels, keyed by the suffix of their CSS classes
+# (pr-social-item-<key>, pr-contact-item-<key>). Each key needs an icon in the CSS.
+# external: true for links to outside websites, false for anything else (email).
+# Only external ones are shown in the home page's hero.
+
+applemusic:
+  name: "Apple Music"
+  external: true
+
+artstation:
+  name: "ArtStation"
+  external: true
+
+bluesky:
+  name: "Bluesky"
+  external: true
+
+discord:
+  name: "Discord"
+  external: true
+
+email:
+  name: "Email"
+  external: false
+
+github:
+  name: "GitHub"
+  external: true
+
+gitlab:
+  name: "GitLab"
+  external: true
+
+instagram:
+  name: "Instagram"
+  external: true
+
+itchio:
+  name: "itch.io"
+  external: true
+
+linkedin:
+  name: "LinkedIn"
+  external: true
+
+mastodon:
+  name: "Mastodon"
+  external: true
+
+spotify:
+  name: "Spotify"
+  external: true
+
+steam:
+  name: "Steam"
+  external: true
+
+twitter:
+  name: "Twitter"
+  external: true
+
+twitterx:
+  name: "Twitter / X"
+  external: true
+
+website:
+  name: "Website"
+  external: true
+
+youtube:
+  name: "YouTube"
+  external: true

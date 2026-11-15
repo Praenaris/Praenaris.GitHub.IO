@@ -699,6 +699,14 @@ body {
 					font-weight: var(--contact-list-item--font-weight--hover);
 				}
 
+		.pr-contact-item.pr-contact-item-bluesky {
+			background-image: url("/img/icon-bluesky-dark.webp");
+		}
+
+				.pr-contact-item.pr-contact-item-bluesky:hover {
+					background-image: url("/img/icon-bluesky-light.webp");
+				}
+
 		.pr-contact-item.pr-contact-item-discord {
 			background-image: url("/img/icon-discord-dark.webp");
 		}
@@ -721,6 +729,14 @@ body {
 
 				.pr-contact-item.pr-contact-item-instagram:hover {
 					background-image: url("/img/icon-instagram-light.webp");
+				}
+
+		.pr-contact-item.pr-contact-item-mastodon {
+			background-image: url("/img/icon-mastodon-dark.webp");
+		}
+
+				.pr-contact-item.pr-contact-item-mastodon:hover {
+					background-image: url("/img/icon-mastodon-light.webp");
 				}
 
 		.pr-contact-item.pr-contact-item-twitter {
@@ -810,6 +826,14 @@ body {
 
 				.pr-social-item.pr-social-item-artstation:hover {
 					background-image: url("/img/icon-artstation-light.webp");
+				}
+
+		.pr-social-item.pr-social-item-bluesky {
+			background-image: url("/img/icon-bluesky-dark.webp");
+		}
+
+				.pr-social-item.pr-social-item-bluesky:hover {
+					background-image: url("/img/icon-bluesky-light.webp");
 				}
 
 		.pr-social-item.pr-social-item-discord {

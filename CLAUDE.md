@@ -44,7 +44,7 @@ No theme is used (`themes/` is empty). The site's own layouts do everything.
 - `hugo.toml`: site config. `DisableKinds = ["taxonomy"]`. `params.Authors` fills the author `<meta>` tags.
 - `layouts/_default/baseof.html`: the HTML skeleton. Each page layout fills `{{ define "body" }}` with its own `<body id="pr-page-…">`.
 - `layouts/index.html`: the home page (hero, works grid, workshop, copyright).
-- `layouts/about/list.html`, `layouts/contact/list.html`: section pages. Their text is hardcoded in the layout. The `_index.md` files only hold the title and menu weight.
+- `layouts/about/list.html`, `layouts/contact/list.html`: section pages. Their text is hardcoded in the layout, except the crew and the social links, which come from `data/`. The `_index.md` files only hold the title and menu weight.
 - `layouts/privacy/list.html`: renders the Markdown body of `content/privacy/_index.md`. The privacy notice is the only page whose text lives in Markdown. The "Last updated" line comes from the `lastmod` front-matter field, so bump it whenever the notice changes. Use `##` for its subheadings, which are styled like `p.pr-header`. Lists and tables have no styling yet. It's linked from the footer, not the nav.
 - `layouts/works/list.html`: empty for now. Works are shown on the home page and as overlays, not on their own pages.
 - `layouts/partials/`:
@@ -53,6 +53,10 @@ No theme is used (`themes/` is empty). The site's own layouts do everything.
 	- `overlays.html`: one hidden overlay per work (`#pr-overlay-<filename>`), built from the works' front matter. Pages that link to works include it.
 	- `copyright.html`: the footer, with the copyright line and the Privacy Notice link.
 - `layouts/_default/_markup/render-link.html`: render hook for Markdown links, including the works' `markdownify` descriptions. It opens `http`/`https` links in a new tab, like the hand-written links. `mailto:` and site links keep the default.
+- `data/socials.yaml`: social network keys (the suffix of `pr-social-item-<key>` / `pr-contact-item-<key>`, whose icons live in the CSS) mapped to a display name and an `external` flag. Only external ones (not `email`) show in the home hero.
+- `data/studio.yaml`: the studio's own social links (`socials`), shown on the home page and the Contact page.
+- `data/crew.yaml`: the crew on the About page, in order. `active: false` hides former members, who are kept in the file.
+- `layouts/partials/social-links.html`: builds a social list from one of those link lists. Takes a dict with `links`, `style` (`social` icons or `contact` labelled), `class` and `externalOnly`.
 - `data/stores.yaml`: store keys (`Steam`, `Itchio`, `GOG`…) mapped to a display name and an SVG icon in `static/img/stores/`.
 - `static/css/legacy/`: the stylesheets actually in use (`general.css`, `praenaris.css`, `praenaris-mobile.css`). `legacy.css` is not linked anywhere. `static/css/*.css` (`main`, `nav`, `body`, `footer`, `_default`) are empty placeholders for the planned CSS rework.
 - `static/js/`: plain scripts with no bundler. `main.js` runs the init on `window.onload`, `overlay_manager.js` shows and hides work overlays, `color_mode_switcher.js` swaps the favicon for dark mode, `whitespace_remover.js` removes whitespace-only text nodes. The `_LEGACY_*.js` files are not used.
@@ -93,7 +97,7 @@ To add a work, create the file, add its cover and picture images, and add any ne
 - JS: plain functions in the global scope, Allman braces for function declarations and K&R braces for control flow. Leave 4 blank lines between groups of functions and 2 between related functions. Event handlers bail out early with `if ((event != undefined) && (event.target != event.currentTarget)) return;`.
 - Many layout, CSS and JS files end with a braille-art ship banner inside comments. Keep it when editing those files.
 - Asset paths are root-absolute (`/img/…`, `/css/…`, `/js/…`).
-- Commented-out blocks, such as former crew members in `about/list.html` and old works markup in `index.html`, are kept on purpose. Don't delete them unless asked.
+- Commented-out blocks, such as old works markup in `index.html`, are kept on purpose. Don't delete them unless asked.
 - Site text is in English. `LanguageCode` is `en-us` and `i18n/` is empty.
 
 
